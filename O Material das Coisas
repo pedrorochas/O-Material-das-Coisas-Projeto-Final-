@@ -1,0 +1,4946 @@
+{
+var tela=1;
+var inte=1;
+var reinte=0;
+var mov=1;
+var tempo=0;
+var x1=20;
+var y1=390;
+var ferroinv=0;
+var madeirainv=0;
+var tecidoinv=0;
+var marteloinv=0;
+var tesourainv=0;
+var musimenufreq=0;
+}//Coeficientes
+
+{
+var pedro;
+var orientador;
+var iconefase1;
+var menu;
+var persomenu;
+var tesomenu;
+var bicimenu;
+var ferromenu;
+var gramafase1;
+var ceufase1;
+var fundofase1;
+var perdirpar;
+var perdirand;
+var peresqpar;
+var peresqand;
+var perbaipar;
+var perbaiand;
+var percimpar;
+var percimand;
+var placasetadir;
+var casasus;
+var velhosus;
+var cidade1;
+var casa1cida;
+var casa2cida;
+var npccida1;
+var npccida2;
+var npccida3;
+var npccida4;
+var intsus;
+var velhosusdia;
+var persodia;
+var perdirand2;
+var peresqand2;
+var percimand2;
+var perbaiand2;
+var cidade1dir;
+var cidade1cim;
+var cidade1bai;
+var penhasco;
+var casarosa;
+var garotarosa;
+var garotaazul;
+var tendamarrom;
+var madeirachao;
+var meninomarrom;
+var fogueira;
+var caradaponte;
+var introsa;
+var rosadia;
+var ferro;
+var intmarrom;
+var marromdia;
+var madeira;
+var azuldia;
+var tecido;
+var intinven;
+var invendia;
+var martelo;
+var tesoura;
+var ponte;
+var persointro;
+var persointro2;
+var coelhointro;
+var coelhointro2;
+var persointro3;
+var persofinal1;
+var coelhofinal1;
+var coelhofinal2;
+var persofinal2;
+var persofinal3;
+}//Imagens
+
+{
+var musifase1;
+var musivila1;
+var musipenhasco;
+var musimenu;
+var musiintro1;
+var musifinal1;
+}//Sons
+
+function preload() {
+  pedro = loadImage('programador.jpg');
+  orientador = loadImage('orientador.jpg');
+  iconefase1 = loadImage('iconefase1.jpg');
+  menu = loadImage('menu.jpg');
+  persomenu = loadImage('persomenu.png');
+  tesomenu = loadImage('tesomenu.png');
+  bicimenu = loadImage('bicimenu.png');
+  ferromenu = loadImage('ferromenu.png');
+  gramafase1 = loadImage('gramafase1.png');
+  ceufase1 = loadImage('ceufase1.png');
+  fundofase1 = loadImage('fundofase1.jpg');
+  perdirpar = loadImage('perdirpar.png');
+  perdirand = loadImage('perdirand.png');
+  peresqpar = loadImage('peresqpar.png');
+  peresqand = loadImage('peresqand.png');
+  perbaipar = loadImage('perbaipar.png');
+  perbaiand = loadImage('perbaiand.png');
+  percimpar = loadImage('percimpar.png');
+  percimand = loadImage('percimand.png');
+  placasetadir = loadImage('placasetadir.png');
+  casasus = loadImage('casasus.png');
+  velhosus = loadImage('velhosus.png');
+  cidade1 = loadImage('cidade1.png');
+  casa1cida = loadImage('casa1cida.png');
+  casa2cida = loadImage('casa2cida.png');
+  npccida1 = loadImage('npccida1.png');
+  npccida2 = loadImage('npccida2.png');
+  npccida3 = loadImage('npccida3.png');
+  npccida4 = loadImage('npccida4.png');
+  intsus = loadImage('intsus.jpg');
+  velhosusdia = loadImage('velhosusdia.png');
+  persodia = loadImage('persodia.png');
+  musifase1 = loadSound('musifase1.mp3');
+  musivila1 = loadSound('musivila1.mp3');
+  perdirand2 = loadImage('perdirand2.png');
+  peresqand2 = loadImage('peresqand2.png');
+  percimand2 = loadImage('percimand2.png');
+  perbaiand2 = loadImage('perbaiand2.png');
+  cidade1dir = loadImage('cidade1dir.png');
+  cidade1cim = loadImage('cidade1cim.png');
+  cidade1bai = loadImage('cidade1bai.jpg');
+  penhasco = loadImage('penhasco.jpg');
+  casarosa = loadImage('casarosa.png');
+  garotarosa = loadImage('garotarosa.png');
+  garotaazul = loadImage('garotaazul.png');
+  tendamarrom = loadImage('tendamarrom.png');
+  madeirachao = loadImage('madeirachao.png');
+  meninomarrom = loadImage('meninomarrom.png');
+  fogueira = loadImage('fogueira.png');
+  caradaponte = loadImage('caradaponte.png');
+  introsa = loadImage('introsa.jpg');
+  rosadia = loadImage('rosadia.png');
+  ferro = loadImage('ferro.png');
+  intmarrom = loadImage('intmarrom.jpg');
+  marromdia = loadImage('marromdia.png');
+  madeira = loadImage('madeira.png');
+  azuldia = loadImage('azuldia.png');
+  tecido = loadImage('tecido.png');
+  intinven = loadImage('intinven.jpg');
+  invendia = loadImage('invendia.png');
+  martelo = loadImage('martelo.png');
+  tesoura = loadImage('tesoura.png');
+  ponte = loadImage('ponte.png');
+  persointro = loadImage('persointro.png');
+  persointro2 = loadImage('persointro2.png');
+  coelhointro = loadImage('coelhointro.jpg');
+  coelhointro2 = loadImage('coelhointro2.png');
+  persointro3 = loadImage('persointro3.png');
+  musipenhasco = loadSound('musipenhasco.mp3');
+  musimenu = loadSound('musimenu.mp3');
+  musiintro1 = loadSound('musiintro1.mp3');
+  persofinal1 = loadImage('persofinal1.jpg');
+  coelhofinal1 = loadImage('coelhofinal1.jpg');
+  coelhofinal2 = loadImage('coelhofinal2.png');
+  persofinal2 = loadImage('persofinal2.jpg');
+  persofinal3 = loadImage('persofinal3.png');
+  musifinal1 = loadSound('musifinal1.mp3');
+}//Carregamento
+
+function setup() {
+  createCanvas(600, 500);
+}//Espaço
+function draw(){
+  
+            if(keyIsDown(ESCAPE)){
+              clear();
+              tela=1;
+              inte=1;
+              reinte=0;
+              mov=1;
+              x1=20;
+              y1=390;
+              ferroinv=0;
+              madeirainv=0;
+              tecidoinv=0;
+              marteloinv=0;
+              tesourainv=0;
+              musimenufreq=0;
+              musifase1.stop();
+              musivila1.stop();
+              musipenhasco.stop();
+              musimenu.stop();
+  }
+            else{}
+  
+  
+if(tela==1){
+  clear();
+  image(menu, 0, 0);
+  image(persomenu, 430, 230);
+  image(tesomenu, 100, 110);
+  image(bicimenu, 30, 200);
+  image(ferromenu, 450, 20);
+  
+  if(musimenufreq==0){
+    musimenu.loop(0, 1, 1);
+    musimenufreq=1;
+  }
+  else{}
+  
+  
+  if(mouseX>214&&mouseX<360&&mouseY>177&&mouseY<237){
+    strokeWeight(1);
+    stroke(0);
+    fill(20, 120, 250, 170)
+    rect(215, 178, 145, 59, 10 )
+  }
+  else{
+    strokeWeight(1);
+    stroke(0);
+    noFill()
+    rect(215, 178, 145, 59, 10 )
+  }
+  if(mouseX>174&&mouseX<410&&mouseY>271&&mouseY<341){
+    strokeWeight(1);
+    fill(20, 120, 250, 170)
+    rect(175, 272, 235, 70, 10 )
+  }
+  else{
+    strokeWeight(1);
+    noFill()
+    rect(175, 272, 235, 70, 10 )
+  }
+  if(mouseX>196&&mouseX<388&&mouseY>374&&mouseY<436){
+    strokeWeight(1);
+    fill(20, 120, 250, 170)
+    rect(197, 374, 192, 63, 10)
+  }
+  else{
+    strokeWeight(1);
+    noFill()
+    rect(197, 374, 192, 63, 10)
+  }
+  
+if(mouseIsPressed){
+  if(mouseX>214&&mouseX<360&&mouseY>177&&mouseY<237){
+    tela=2;
+  }
+  else{}
+}
+  else{}
+if(mouseIsPressed){
+  if(mouseX>174&&mouseX<410&&mouseY>271&&mouseY<341){
+    tela=3;
+  }
+  else{}
+}
+  else{}
+if(mouseIsPressed){
+  if(mouseX>196&&mouseX<388&&mouseY>374&&mouseY<436){
+    tela=4;
+  }
+  else{}
+}
+  else{}
+  
+    noStroke()
+    textSize(50);
+    fill(40, 40, 100, 255);
+    text('O Material das Coisas', 50, 100);
+  
+    textSize(45);
+    fill(40, 40, 40, 255);
+    text('Jogar', 230, 220);
+  
+    textSize(45);
+    fill(40, 40, 40, 255);
+    text('Instruções', 190, 320);
+  
+    textSize(45);
+    fill(40, 40, 40, 255);
+    text('Créditos', 210, 420);
+  
+    fill(20, 20, 20, 70);
+    ellipse(486, 403, 84, 7);
+  
+    fill(20, 20, 20, 70);
+    ellipse(114, 367, 152, 7);
+    } //Menu
+    else{}
+
+if(tela==2){
+    clear();
+    image(menu, 0, 0);
+    image(iconefase1, 30, 130);
+  
+if(mouseX>39&&mouseX<136&&mouseY>420&&mouseY<470){
+  stroke(0)
+  fill(20, 120, 250, 170)
+  rect(40, 415, 97, 50, 10 )
+}
+  else{
+    stroke(0)
+    noFill()
+    rect(40, 415, 97, 50, 10 )
+  }
+  
+if(mouseIsPressed){
+  if(mouseX>39&&mouseX<136&&mouseY>420&&mouseY<470){
+    tela=1;
+  }
+  else{}
+}
+  else{}
+  
+if(mouseX>30&&mouseX<170&&mouseY>130&&mouseY<270){
+  stroke(0)
+  fill(240, 240, 140, 175)
+  rect(30, 130, 140, 140)
+}
+  else{
+    stroke(0)
+    noFill()
+    rect(30, 130, 140, 140)
+  }
+  
+if(mouseX>230&&mouseX<370&&mouseY>130&&mouseY<270){
+  stroke(0)
+  fill(240, 240, 140, 175)
+  rect(230, 130, 140, 140)
+}
+  else{
+    stroke(0)
+    noFill()
+    rect(230, 130, 140, 140)
+  }
+  
+if(mouseX>430&&mouseX<570&&mouseY>130&&mouseY<270){
+  stroke(0)
+  fill(240, 240, 140, 175)
+  rect(430, 130, 140, 140)
+}
+  else{
+    stroke(0)
+    noFill()
+    rect(430, 130, 140, 140)
+  }
+  
+if(mouseIsPressed){
+  if(mouseX>30&&mouseX<170&&mouseY>130&&mouseY<270){
+    musimenu.stop();
+    musiintro1.loop(0, 1, 0.7);
+    tela=1000;
+  }
+  else{}
+}
+  else{}
+  
+    noStroke()
+    textSize(30)
+    fill(0, 0, 0, 255);
+    text('Voltar', 50, 450);
+  
+    noFill()
+    rect(30, 130, 140, 140)
+  
+    fill(20, 20, 20, 120);
+    rect(230, 130, 140, 140)
+  
+    fill(20, 20, 20, 120);
+    rect(430, 130, 140, 140)
+  
+    textSize(50);  
+    fill(40, 40, 100, 255);
+    text('Fases', 225, 80);
+  
+    textSize(30);
+    fill(0, 0, 0, 255);
+    text('Fase 1', 57, 305);
+  
+    textSize(30);
+    fill(0, 0, 0, 255);
+    text('Fase 2', 257, 305);
+  
+    textSize(30);
+    fill(0, 0, 0, 255);
+    text('Fase 3', 457, 305);
+  
+    textSize(20);
+    fill(100, 180, 250, 255);
+    text('Em breve...', 250, 210);
+    text('Em breve...', 450, 210);
+  
+    } //Jogar
+    else{}
+  
+if(tela==3){
+  clear();
+  image(menu, 0, 0);
+  
+  if(mouseX>39&&mouseX<136&&mouseY>420&&mouseY<470){
+  stroke(0)
+  fill(20, 120, 250, 170)
+  rect(40, 415, 97, 50, 10 )
+}
+  else{
+    stroke(0)
+    noFill()
+    rect(40, 415, 97, 50, 10 )
+  }
+  
+if(mouseIsPressed){
+  if(mouseX>39&&mouseX<136&&mouseY>420&&mouseY<470){
+    tela=1;
+  }
+  else{}
+}
+  else{}
+  
+  noStroke()
+  textSize(30)
+  fill(0, 0, 0, 255);
+  text('Voltar', 50, 450);
+  
+  textSize(50);
+  fill(40, 40, 100, 255);
+  text('Instruções...', 100, 100)
+  
+  textSize(20);  
+  fill(0, 0, 0, 255);
+  text('O Material das Coisas é um jogo desenvolvido', 50, 200);
+  text('para o 2° ano do Ensino Fundamental 1, na', 50, 225);
+  text('disciplina de ciências.', 50, 250);
+  text('O jogo aborda a habilidade EF02CI02: O uso de', 50, 300)
+  text('diferentes materiais para a construção de', 50, 325);
+  text('objetos de uso cotidiano, tendo em vista as', 50, 350)
+  text('propriedades desses materiais.', 50, 375)
+
+  
+  
+  } //Instruções
+  else{}
+  
+if(tela==4){
+  clear();
+  image(menu, 0, 0);
+  image(pedro, 60, 120);
+  image(orientador, 60, 300);
+  
+if(mouseX>439&&mouseX<555&&mouseY>15&&mouseY<62){
+  stroke(0)
+  fill(20, 120, 250, 170)
+  rect(440, 15, 115, 48, 10 )
+}
+  else{
+    stroke(0)
+    noFill()
+    rect(440, 15, 115, 48, 10 )
+  }
+  
+if(mouseIsPressed){
+  if(mouseX>439&&mouseX<555&&mouseY>15&&mouseY<62){
+    tela=1;
+  }
+  else{}
+}
+  else{}
+  
+  noStroke()
+  textSize(50);  
+  fill(40, 40, 100, 255);
+  text('Créditos...', 150, 100);
+  
+  textSize(20)
+  fill(0, 0, 0, 255);
+  text('Programador: Pedro Rocha Di Cavalcanti', 180, 250);
+  
+  textSize(20)
+  fill(0, 0, 0, 255);
+  text('Orientador: Nenhum...', 215, 440);
+  
+  textSize(30)
+  fill(0, 0, 0, 255);
+  text('Voltar', 460, 50);
+  
+  } //Créditos
+  else{}
+  
+if(tela==11){
+  clear();
+  image(fundofase1, 0, 0);
+  
+  
+
+if(x1>=420&&x1<=500&&y1>=200&&y1<=350){
+  strokeWeight(2);
+  stroke(0, 120, 250, 250);
+  fill(240, 220, 70, 190);
+  ellipse(480, 347, 50, 15);
+}
+  else{
+  strokeWeight(3);
+  stroke(50, 110, 250, 250);
+  fill(20, 20, 20, 60);
+  ellipse(480, 347, 50, 15); 
+  }
+
+  
+if(x1>595){
+  tela=12;
+  x1=-16;
+}
+  else{}
+
+  image(placasetadir, 450, 260);
+  
+if(mov==1){
+  image(perdirpar, x1, y1);
+  noStroke()
+  fill(20, 20, 20, 70);
+  ellipse(x1+25, y1+68, 35, 5);
+}
+  else{}
+if(mov==2){
+  image(perdirand, x1, y1);
+  noStroke()
+  fill(20, 20, 20, 70);
+  ellipse(x1+25, y1+68, 35, 5);
+}
+  else{}
+if(mov==3){
+  image(peresqpar, x1, y1);
+  noStroke()
+  fill(20, 20, 20, 70);
+  ellipse(x1+25, y1+68, 35, 5);
+}
+  else{}
+if(mov==4){
+  image(peresqand, x1, y1);
+  noStroke()
+  fill(20, 20, 20, 70);
+  ellipse(x1+25, y1+68, 35, 5);
+}
+  else{}
+if(mov==5){
+  image(perbaipar, x1, y1);
+  noStroke()
+  fill(20, 20, 20, 70);
+  ellipse(x1+25, y1+64, 35, 5);
+}
+  else{}
+if(mov==6){
+  image(perbaiand, x1, y1);
+  noStroke()
+  fill(20, 20, 20, 70);
+  ellipse(x1+25, y1+64, 35, 5);
+}
+  else{}
+if(mov==7){
+  image(percimpar, x1, y1);
+  noStroke()
+  fill(20, 20, 20, 70);
+  ellipse(x1+25, y1+70, 35, 5);
+}
+  else{}
+if(mov==8){
+  image(percimand, x1, y1);
+  noStroke()
+  fill(20, 20, 20, 70);
+  ellipse(x1+25, y1+70, 35, 5);
+}
+  else{}
+if(mov==12){
+  image(perdirand2, x1, y1);
+  noStroke()
+  fill(20, 20, 20, 70);
+  ellipse(x1+25, y1+68, 35, 5);
+}
+  else{}
+if(mov==14){
+  image(peresqand2, x1, y1);
+  noStroke()
+  fill(20, 20, 20, 70);
+  ellipse(x1+25, y1+68, 35, 5);
+}
+  else{}
+if(mov==16){
+  image(perbaiand2, x1, y1);
+  noStroke()
+  fill(20, 20, 20, 70);
+  ellipse(x1+25, y1+64, 35, 5);
+}
+  else{}
+if(mov==18){
+  image(percimand2, x1, y1);
+  noStroke()
+  fill(20, 20, 20, 70);
+  ellipse(x1+25, y1+70, 35, 5);
+}
+  else{}
+  
+if(keyIsDown(LEFT_ARROW)){
+if(x1>10){
+  if(tempo<=1.5){
+    mov=4;
+    x1=x1-2
+    tempo = tempo + 0.1;
+  }
+  else{}
+  if(tempo>1.5&&tempo<3){
+    mov=14;
+    x1 = x1-2;
+    tempo = tempo + 0.1;
+  }
+  else{}
+  if(tempo>=3){
+    tempo = 0;
+  }
+  else{}
+  }
+  else{}
+}
+  else{
+    if(mov==4 || mov==14){
+      tempo=0;
+      mov=3;
+    }
+    else{}
+  }
+  
+if(keyIsDown(RIGHT_ARROW)){
+  if(tempo<=1.5){
+  mov=2;
+  x1=x1+2;
+  tempo = tempo + 0.1;
+  }
+  else{}
+  if(tempo>1.5&&tempo<3){
+      mov=12;
+      x1=x1+2
+      tempo = tempo + 0.1;
+  }
+  else{}
+  if(tempo>=3){
+    tempo=0;
+  }
+  else{}
+}
+  else{
+    if(mov==2 || mov==12){
+      tempo=0;
+      mov=1;
+    }
+    else{}
+  }
+  
+if(keyIsDown(UP_ARROW)){
+if(y1>300){
+  if(tempo<=1.5){
+  mov=8;
+  y1=y1-2
+  tempo = tempo + 0.1;  
+  }  
+  else{}
+  if(tempo>1.5&&tempo<3){
+    mov=18
+    y1=y1-2
+    tempo=tempo+0.1;
+  }
+  else{}
+  if(tempo>=3){
+    tempo=0;
+  }
+  else{}
+}
+  else{}
+}
+  else{
+    if(mov==8 || mov==18){
+      tempo=0;
+      mov=7;
+    }
+    else{}
+  }
+  
+if(keyIsDown(DOWN_ARROW)){
+if(y1<400){
+  if(tempo<=1.5){
+  mov=6;
+  y1=y1+2
+  tempo = tempo + 0.1;
+  }
+  else{}
+  if(tempo>1.5&&tempo<3){
+  mov=16;
+  y1=y1+2
+  tempo = tempo + 0.1;    
+  }
+  else{}
+  if(tempo>=3){
+    tempo=0;
+  }
+  else{}
+}
+  else{}
+}
+  else{
+    if(mov==6 || mov==16){
+    tempo = 0;
+    mov=5;
+  }
+    else{}
+}
+  
+if(keyIsDown(90)){
+  inte=2;
+}
+  else{}
+  
+if(keyIsDown(88)){
+  inte=1;
+}
+  else{}
+
+if(inte==2){
+  if(x1>=420&&x1<=500&&y1>=200&&y1<=350){
+      
+      strokeWeight(5);
+      stroke(240, 220, 70, 250)
+      fill(50, 110, 250, 180)
+      rect(70, 50, 400, 200);
+      
+      textSize(20);
+      noStroke();
+      fill(0, 0, 0, 250);
+      text('A Cidade Tranquila fica para lá!', 80, 90);
+      text('Continue caminhando para a direita!', 80, 130);
+      text('Se você for para a esquerda, chegará na', 80, 190);
+      text('Floresta do Sossego... tome cuidado!', 80, 230);
+      
+  }
+  else{}
+}
+  else{}
+  
+  
+} //Fase1 Estrada da Placa
+  else{}
+  
+if(tela==12){
+  clear();
+  image(fundofase1, 0, 0);
+  
+  noStroke();
+  fill(20, 20, 20, 120);
+  ellipse(315, 355, 380, 10);
+  
+  
+if(x1>=400&&x1<=490&&y1>=280&&y1<=310){
+  strokeWeight(2);
+  stroke(0, 120, 250, 250);
+  fill(240, 220, 70, 190);
+  ellipse(467, 367, 80, 13);
+}
+  else{
+  strokeWeight(3);
+  stroke(50, 110, 250, 250);
+  fill(20, 20, 20, 60);
+  ellipse(467, 367, 80, 13); 
+}
+  
+if(x1>=195&&x1<=255&&y1>=280&&y1<=310){
+  strokeWeight(2);
+  stroke(0, 120, 250, 250);
+  fill(240, 220, 70, 190);
+  ellipse(243, 365, 60, 10);
+}
+  else{
+  strokeWeight(3);
+  stroke(50, 110, 250, 250);
+  fill(20, 20, 20, 60);
+  ellipse(243, 365, 60, 10); 
+}
+
+  
+  image(velhosus, 430, 240);
+  image(casasus, 120, 170);
+  
+  
+  
+if(x1<-40){
+  x1=566
+  tela=11;
+}
+  else{}
+if(x1>595){
+  x1=-16;
+  tela=13;
+  musifase1.stop();
+  musivila1.loop(0, 1, 0.25);
+}
+  else{}
+  
+if(mov==1){
+  image(perdirpar, x1, y1);
+  noStroke()
+  fill(20, 20, 20, 70);
+  ellipse(x1+25, y1+68, 35, 5);
+}
+  else{}
+if(mov==2){
+  image(perdirand, x1, y1);
+  noStroke()
+  fill(20, 20, 20, 70);
+  ellipse(x1+25, y1+68, 35, 5);
+}
+  else{}
+if(mov==3){
+  image(peresqpar, x1, y1);
+  noStroke()
+  fill(20, 20, 20, 70);
+  ellipse(x1+25, y1+68, 35, 5);
+}
+  else{}
+if(mov==4){
+  image(peresqand, x1, y1);
+  noStroke()
+  fill(20, 20, 20, 70);
+  ellipse(x1+25, y1+68, 35, 5);
+}
+  else{}
+if(mov==5){
+  image(perbaipar, x1, y1);
+  noStroke()
+  fill(20, 20, 20, 70);
+  ellipse(x1+25, y1+64, 35, 5);
+}
+  else{}
+if(mov==6){
+  image(perbaiand, x1, y1);
+  noStroke()
+  fill(20, 20, 20, 70);
+  ellipse(x1+25, y1+64, 35, 5);
+}
+  else{}
+if(mov==7){
+  image(percimpar, x1, y1);
+  noStroke()
+  fill(20, 20, 20, 70);
+  ellipse(x1+25, y1+70, 35, 5);
+}
+  else{}
+if(mov==8){
+  image(percimand, x1, y1);
+  noStroke()
+  fill(20, 20, 20, 70);
+  ellipse(x1+25, y1+70, 35, 5);
+}
+  else{}
+if(mov==12){
+  image(perdirand2, x1, y1);
+  noStroke()
+  fill(20, 20, 20, 70);
+  ellipse(x1+25, y1+68, 35, 5);
+}
+  else{}
+if(mov==14){
+  image(peresqand2, x1, y1);
+  noStroke()
+  fill(20, 20, 20, 70);
+  ellipse(x1+25, y1+68, 35, 5);
+}
+  else{}
+if(mov==16){
+  image(perbaiand2, x1, y1);
+  noStroke()
+  fill(20, 20, 20, 70);
+  ellipse(x1+25, y1+64, 35, 5);
+}
+  else{}
+if(mov==18){
+  image(percimand2, x1, y1);
+  noStroke()
+  fill(20, 20, 20, 70);
+  ellipse(x1+25, y1+70, 35, 5);
+}
+  else{}
+  
+  
+if(keyIsDown(LEFT_ARROW)){
+  if(tempo<=1.5){
+    mov=4;
+    x1=x1-2
+    tempo = tempo + 0.1;
+  }
+  else{}
+  if(tempo>1.5&&tempo<3){
+    mov=14;
+    x1 = x1-2;
+    tempo = tempo + 0.1;
+  }
+  else{}
+  if(tempo>=3){
+    tempo = 0;
+  }
+  else{}
+  }
+  else{
+    if(mov==4 || mov==14){
+      tempo=0;
+      mov=3;
+    }
+    else{}
+  }
+  
+if(keyIsDown(RIGHT_ARROW)){
+  if(tempo<=1.5){
+  mov=2;
+  x1=x1+2;
+  tempo = tempo + 0.1;
+  }
+  else{}
+  if(tempo>1.5&&tempo<3){
+      mov=12;
+      x1=x1+2
+      tempo = tempo + 0.1;
+  }
+  else{}
+  if(tempo>=3){
+    tempo=0;
+  }
+  else{}
+}
+  else{
+    if(mov==2 || mov==12){
+      tempo=0;
+      mov=1;
+    }
+    else{}
+  }
+  
+if(keyIsDown(UP_ARROW)){
+  if(y1>300){
+  if(tempo<=1.5){
+  mov=8;
+  y1=y1-2
+  tempo = tempo + 0.1;  
+  }  
+  else{}
+  if(tempo>1.5&&tempo<3){
+    mov=18
+    y1=y1-2
+    tempo=tempo+0.1;
+  }
+  else{}
+  if(tempo>=3){
+    tempo=0;
+  }
+  else{}
+  }
+  else{}
+}
+  else{
+    if(mov==8 || mov==18){
+      tempo=0;
+      mov=7;
+    }
+    else{}
+  }
+  
+if(keyIsDown(DOWN_ARROW)){
+  if(y1<400){
+  if(tempo<=1.5){
+  mov=6;
+  y1=y1+2
+  tempo = tempo + 0.1;
+  }
+  else{}
+  if(tempo>1.5&&tempo<3){
+  mov=16;
+  y1=y1+2
+  tempo = tempo + 0.1;    
+  }
+  else{}
+  if(tempo>=3){
+    tempo=0;
+  }
+  else{}
+  }
+  else{}
+}
+  else{
+    if(mov==6 || mov==16){
+    tempo = 0;
+    mov=5;
+  }
+    else{}
+}
+  
+  
+if(keyIsDown(90)){
+  inte=2;
+}
+  else{}
+  
+if(keyIsDown(88)){
+  inte=1;
+}
+  else{}
+  
+if(inte==2){
+  if(x1>=400&&x1<=490&&y1>=280&&y1<=310){
+    
+    strokeWeight(5);
+    stroke(240, 220, 70, 250)
+    fill(50, 110, 250, 180)
+    rect(70, 50, 400, 350);
+    
+      textSize(20);
+      noStroke();
+      fill(0, 0, 0, 250);
+      text('Olá, garotinha; o que você procura?', 90, 85);
+      text('Eu me chamo Susaílo, mas meus amigos', 90, 115);
+      text('me chamam de Velho Sus.', 90, 145);
+    
+      text('Gosto muito de conversar, e você parece', 90, 200);
+      text('ser bastante simpática! O seu sorriso já', 90, 230);
+      text('me deixa feliz.', 90, 260);
+    
+      text('Se você precisar de mim para algo, não', 90, 320);
+      text('se incomode de entrar em casa para', 90, 350);
+      text('conversar.', 90, 380);
+    
+    
+  }
+  else{}
+}
+  else{}
+  
+if(inte==2){
+  if(x1>=195&&x1<=255&&y1>=280&&y1<=310){
+    if(reinte==0){
+    
+    strokeWeight(5);
+    stroke(240, 220, 70, 250);
+    fill(50, 110, 250, 180);
+    rect(70, 50, 400, 150);
+    
+    
+    textSize(20);
+    noStroke()
+    fill(0, 0, 0, 250);
+    text('i) Abrir a porta...', 90, 95);
+    text('j) Cancelar...', 90, 135);
+    
+    if(keyIsDown(73)){
+      reinte=1;
+    }
+    if(keyIsDown(74)){
+      inte=1;
+    }
+
+  }
+    else{}
+    
+    if(reinte==1){
+      
+    strokeWeight(5);
+    stroke(240, 220, 70, 250)
+    fill(50, 110, 250, 180)
+    rect(70, 50, 400, 150);
+      
+    textSize(20)
+    noStroke()
+    fill(0, 0, 0, 250)
+    text('Pode entrar!', 90, 90);
+    text('c) Entrar...', 270, 170)
+      
+      if(keyIsDown(67)){
+        tela=20;
+        reinte=0;
+      }
+      else{}
+      
+    }
+    
+  }
+  else{}
+}
+  else{}
+
+  
+} //Fase1 Casa do Velho
+  else{}
+  
+if(tela==20){
+  clear()
+  image(intsus, 0, 0);
+  image(velhosusdia, 0, 180);
+  image(persodia, 330, 115);
+  
+  if(reinte==0){
+  
+      strokeWeight(5);
+      stroke(240, 220, 70, 250)
+      fill(50, 110, 250, 180)
+      rect(70, 50, 400, 200);
+  
+      textSize(20);
+      noStroke();
+      fill(0, 0, 0, 250);
+      text('Gosto da sua curiosidade, Alice!', 90, 80);
+      text('Sobre o quê você quer conversar?', 90, 110);
+      text('i) Me conte algo interessante!', 90, 160);
+      text('j) Me conte sobre a vila.', 90, 190);
+      text('k) Sair...', 90, 220);
+    
+    if(keyIsDown(73)){
+      reinte=10;
+    }
+    else{}
+    if(keyIsDown(74)){
+      reinte=20;
+    }
+    else{}
+    if(keyIsDown(75)){
+      tela=12;
+      x1=220;
+      y1=340;
+      inte=1;
+    }
+    else{}
+    
+}
+  else{}
+  
+  if(reinte==10){
+    
+      strokeWeight(5);
+      stroke(240, 220, 70, 250)
+      fill(50, 110, 250, 180)
+      rect(70, 50, 400, 300);
+    
+      textSize(20);
+      noStroke();
+      fill(0, 0, 0, 250);
+      text('Algo interessante é?', 90, 80)
+      text('Você sabia que do lado direito da vila', 90, 120);
+      text('existe um penhasco com uma ponte?', 90, 150);
+      text('Ela está bloqueada por um rapaz, e', 90, 190);
+      text('ele só deixará as pessoas passarem se', 90, 220);
+      text('alguém ouvir a história dele, e cumprir', 90, 250);
+      text('sua tarefa...', 90, 280);
+      text('c) Continuar...', 270, 330);
+    
+    if(keyIsDown(67)){
+      reinte=11;
+    }
+    else{}
+    
+  }
+  else{}
+  if(reinte==11){
+    
+      strokeWeight(5);
+      stroke(240, 220, 70, 250)
+      fill(50, 110, 250, 180)
+      rect(70, 50, 400, 300);
+    
+      textSize(20);
+      noStroke();
+      fill(0, 0, 0, 250);
+      text('Parece que ele precisa de uma', 90, 90);
+      text('.', 443, 90);
+      text('Não sei o que ele quer com uma tesoura,', 90, 130);
+      text('mas ele só te deixará passar se você o', 90, 160);
+      text('trouxer uma tesoura...', 90, 190);
+      text('Ouvi dizer que ele deixou um', 90, 240);
+      text('passar, e que ele está logo depois', 90, 270);
+      text('da ponte.', 90, 300);
+      text('i) Coelho...', 270, 330);
+    
+      textSize(20);
+      noStroke();
+      fill(240, 220, 70, 250)
+      text('Tesoura', 370, 90);
+      text('Coelho', 355, 240);
+    
+    
+    if(keyIsDown(73)){
+      reinte=12;
+    }
+    else{}
+      
+  }
+  else{}
+  if(reinte==12){
+    
+      strokeWeight(5);
+      stroke(240, 220, 70, 250)
+      fill(50, 110, 250, 180)
+      rect(70, 50, 400, 300);
+   
+      textSize(20);
+      noStroke();
+      fill(0, 0, 0, 250);
+      text('Você está atrás de um coelho então?', 90, 90);
+      text('Bem, se você está atrás de um coelho,', 90, 120);
+      text('você deve procurar um jeito de fazer', 90, 150);
+      text('uma tesoura, e dá-la a esse rapaz.', 90, 180);
+      text('Se você der a tesoura a ele, ele', 90, 240);
+      text('deixará você passar, e você poderá', 90, 270);
+      text('ter o seu coelho.', 90, 300);
+      text('c) Voltar...', 270, 330);
+    
+    if(keyIsDown(67)){
+      reinte=0;
+    }
+    else{}
+    
+    
+    
+  }
+  else{}
+  
+  if(reinte==20){
+    
+      strokeWeight(5);
+      stroke(240, 220, 70, 250)
+      fill(50, 110, 250, 180)
+      rect(70, 50, 400, 300);
+    
+      textSize(20);
+      noStroke();
+      fill(0, 0, 0, 250);
+      text('Sobre a vila, hum...', 90, 80);
+      text('Existe um homem de cabelo preto e', 90, 120);
+      text('óculos que mora em uma casa amarela.', 90, 150);
+      text('Ele é muito inteligente, e sabe como', 90, 180);
+      text('construir várias', 90, 210);
+      text('Se você precisar construir qualquer', 90, 240);
+      text('coisa ele pode te ajudar, mas você', 90, 270);
+      text('precisa trazer o',90, 300);
+      text('c) Continuar...', 270, 330);
+    
+      textSize(20);
+      noStroke();
+      fill(240, 220, 70, 250);
+      text('ferramentas.', 232, 210);
+      text('material.', 235, 300);
+    
+    if(keyIsDown(67)){
+      reinte=21;
+    }
+    else{}
+    
+  }
+  else{}
+  if(reinte==21){
+    
+      strokeWeight(5);
+      stroke(240, 220, 70, 250)
+      fill(50, 110, 250, 180)
+      rect(70, 50, 400, 300);
+    
+      textSize(20);
+      noStroke();
+      fill(0, 0, 0, 250);
+      text('Se você seguir para cima no vilarejo', 90, 80);
+      text('encontrará uma menina de cabelo rosa.', 90, 110);
+      text('Ela é uma ferreira, e trabalha com', 90, 140);
+      text('materiais duros, como', 90, 170);
+      text('.', 353, 170);
+      text('Se você seguir para baixo no vilarejo', 90, 210);
+      text('encontrará um menino de cabelo marrom.', 90, 240);
+      text('Ele é um aventureiro, e já conseguiu', 90, 270);
+      text('várias', 90, 300);
+      text('interessantes...', 212, 300);
+      text('j) Continuar...', 270, 330);
+    
+      textSize(20);
+      noStroke();
+      fill(240, 220, 70, 250);
+      text('metais', 292, 170);
+      text('coisas', 150, 300);
+    
+    if(keyIsDown(74)){
+      reinte=22;
+    }
+    else{}
+    
+  }
+  else{}
+  if(reinte==22){
+    
+      strokeWeight(5);
+      stroke(240, 220, 70, 250)
+      fill(50, 110, 250, 180)
+      rect(70, 50, 400, 300);
+    
+      textSize(20);
+      noStroke();
+      fill(0, 0, 0, 250);
+      text('Se você continuar seguindo para direita', 90, 80);
+      text('encontrará uma mulher que vem de bem', 90, 110);
+      text('longe. Ela veste roupas de frio, e sabe', 90, 140);
+      text('como costurar e fazer', 90, 170);
+      text('.', 356, 170);
+      text('Existem outras coisas na vila, Alice,', 90, 210);
+      text('mas eu não consigo lembrar de tudo...', 90, 240);
+      text('Mas eu sei que a sua curiosidade te', 90, 270);
+      text('levará a onde você quer chegar.', 90, 300);
+      text('c) Voltar...', 270, 330);
+    
+      textSize(20);
+      noStroke();
+      fill(240, 220, 70, 250);
+      text('tecidos', 290, 170);
+      
+      if(keyIsDown(67)){
+        reinte=0;
+      }
+      else{}
+    
+  }
+  
+  
+  
+} //Fase1 Interior da Casa do Velho
+  else{}
+  
+if(tela==13){
+  clear()
+  image(cidade1, 0, 0);
+  
+  
+  noStroke()
+  fill(0, 0, 0, 150);
+  rect(405, 290, 187, 12);
+  rect(343, 258, 65, 15);
+  rect(580, 210, 12, 80);
+  rect(23, 255, 151, 18);
+  rect(174, 202, 12, 71);
+  
+  image(casa1cida, 0, 60);
+  image(casa2cida, 340, 60);
+  
+  noStroke()
+  fill(0, 0, 0, 70);
+  ellipse(143, 299, 40, 8);
+  ellipse(450, 416, 35, 5);
+  ellipse(386, 416, 38, 5);
+  ellipse(215, 496, 38, 5);
+  
+  image(npccida1, 420, 350);
+  image(npccida2, 360, 350);
+  image(npccida3, 120, 230);
+
+  
+if(x1<-40){
+  x1=566
+  y1=350
+  tela=12;
+  musivila1.stop();
+  musifase1.loop(0, 1, 1.5);
+}
+  else{}
+if(x1>595){
+  x1=-16;
+  y1=350
+  tela=14;
+}
+  else{}
+if(y1==130){
+  tela=15;
+  y1=494;
+}
+  else{}
+if(y1==500){
+  x1=250;
+  y1=264;
+  tela=16;
+}
+  else{}
+  
+  
+  if(x1>92&&x1<145&&y1>=240&&y1<275){
+    strokeWeight(2);
+    stroke(0, 120, 250, 250);
+    fill(240, 220, 70, 190);
+    ellipse(143, 322, 51, 20);
+}
+  else{
+    strokeWeight(3);
+    stroke(50, 110, 250, 250);
+    fill(20, 20, 20, 60);
+    ellipse(143, 322, 51, 20);
+  }
+  
+  
+  if(x1>314&&x1<=360&&y1>=220&&y1<240){
+    strokeWeight(2);
+    stroke(0, 120, 250, 250);
+    fill(240, 220, 70, 190);
+    ellipse(370, 288, 60, 20);
+}
+    else{
+    strokeWeight(3);
+    stroke(50, 110, 250, 250);
+    fill(20, 20, 20, 60);
+    ellipse(370, 288, 60, 20);
+    }
+
+  
+if(mov==1){
+  image(perdirpar, x1, y1);
+  noStroke()
+  fill(20, 20, 20, 70);
+  ellipse(x1+25, y1+68, 35, 5);
+}
+  else{}
+if(mov==2){
+  image(perdirand, x1, y1);
+  noStroke()
+  fill(20, 20, 20, 70);
+  ellipse(x1+25, y1+68, 35, 5);
+}
+  else{}
+if(mov==3){
+  image(peresqpar, x1, y1);
+  noStroke()
+  fill(20, 20, 20, 70);
+  ellipse(x1+25, y1+68, 35, 5);
+}
+  else{}
+if(mov==4){
+  image(peresqand, x1, y1);
+  noStroke()
+  fill(20, 20, 20, 70);
+  ellipse(x1+25, y1+68, 35, 5);
+}
+  else{}
+if(mov==5){
+  image(perbaipar, x1, y1);
+  noStroke()
+  fill(20, 20, 20, 70);
+  ellipse(x1+25, y1+64, 35, 5);
+}
+  else{}
+if(mov==6){
+  image(perbaiand, x1, y1);
+  noStroke()
+  fill(20, 20, 20, 70);
+  ellipse(x1+25, y1+64, 35, 5);
+}
+  else{}
+if(mov==7){
+  image(percimpar, x1, y1);
+  noStroke()
+  fill(20, 20, 20, 70);
+  ellipse(x1+25, y1+70, 35, 5);
+}
+  else{}
+if(mov==8){
+  image(percimand, x1, y1);
+  noStroke()
+  fill(20, 20, 20, 70);
+  ellipse(x1+25, y1+70, 35, 5);
+}
+  else{}
+if(mov==12){
+  image(perdirand2, x1, y1);
+  noStroke()
+  fill(20, 20, 20, 70);
+  ellipse(x1+25, y1+68, 35, 5);
+}
+  else{}
+if(mov==14){
+  image(peresqand2, x1, y1);
+  noStroke()
+  fill(20, 20, 20, 70);
+  ellipse(x1+25, y1+68, 35, 5);
+}
+  else{}
+if(mov==16){
+  image(perbaiand2, x1, y1);
+  noStroke()
+  fill(20, 20, 20, 70);
+  ellipse(x1+25, y1+64, 35, 5);
+}
+  else{}
+if(mov==18){
+  image(percimand2, x1, y1);
+  noStroke()
+  fill(20, 20, 20, 70);
+  ellipse(x1+25, y1+70, 35, 5);
+}
+  else{}
+
+if(keyIsDown(LEFT_ARROW)){
+if(y1>=220&&x1>165&&x1<236 || y1>=220&&x1<120 || y1>=260&&x1>=120&&x1<=165 || x1>180&&y1>100&&y1<220 || x1>236&&x1<476 || y1<363&&y1>260&&x1<476 || x1>476&&y1<364&&y1>280 || y1<=280&&x1>=476 || y1>=364&&x1>=476 || y1>=220&&y1<240&&x1>165&&x1<=236){
+    if(tempo<=1.5){
+    mov=4;
+    x1=x1-2
+    tempo = tempo + 0.1;
+  }
+  else{}
+  if(tempo>1.5&&tempo<3){
+    mov=14;
+    x1 = x1-2;
+    tempo = tempo + 0.1;
+  }
+  else{}
+  if(tempo>=3){
+    tempo = 0;
+  }
+  else{}
+  }
+  else{}
+}
+  else{
+    if(mov==4 || mov==14){
+      tempo=0;
+      mov=3;
+    }
+    else{}
+  }
+  
+if(keyIsDown(RIGHT_ARROW)){
+if(y1>=220&&x1<75 || x1<296&&y1>100&&y1<220 || x1>295&&x1<360&&y1>=220&&y1<=240 || x1>=360&&y1>=240 || y1>=260&&x1<144 || x1>145&&x1<295&&y1>=220 || y1>=260&&y1<365&&x1<315 || y1>=364&&x1>295 || y1>240&&y1<285){
+    if(tempo<=1.5){
+  mov=2;
+  x1=x1+2;
+  tempo = tempo + 0.1;
+  }
+  else{}
+  if(tempo>1.5&&tempo<3){
+      mov=12;
+      x1=x1+2
+      tempo = tempo + 0.1;
+  }
+  else{}
+  if(tempo>=3){
+    tempo=0;
+  }
+  else{}
+  }
+  else{}
+}
+  else{
+    if(mov==2 || mov==12){
+      tempo=0;
+      mov=1;
+    }
+    else{}
+  }
+  
+if(keyIsDown(UP_ARROW)){
+if(y1>260&&x1>75&&x1<164 || x1>175&&x1<=296&&y1>130 || x1>=295&&x1<=360&&y1>220&&y1<300 || x1>=314&&x1<476&&y1>365 || y1>220&&x1<80 || y1>=220&&x1>=164&&x1<=296 || y1<285&&y1>240&&x1>296 || x1>=476&&y1>240 || x1>295&&x1<322&&y1>220){
+    if(tempo<=1.5){
+  mov=8;
+  y1=y1-2
+  tempo = tempo + 0.1;  
+  }  
+  else{}
+  if(tempo>1.5&&tempo<3){
+    mov=18
+    y1=y1-2
+    tempo=tempo+0.1;
+  }
+  else{}
+  if(tempo>=3){
+    tempo=0;
+  }
+  else{}
+  }
+  else{}
+}
+  else{
+    if(mov==8 || mov==18){
+      tempo=0;
+      mov=7;
+    }
+    else{}
+  }
+
+if(keyIsDown(DOWN_ARROW)){
+if(y1<363&&x1>145&&x1<240 || x1<=145 || x1>=236&&x1<=316 || x1>=316&&y1<280 || x1>316&&y1>290 || x1>=476){
+  if(tempo<=1.5){
+  mov=6;
+  y1=y1+2
+  tempo = tempo + 0.1;
+  }
+  else{}
+  if(tempo>1.5&&tempo<3){
+  mov=16;
+  y1=y1+2
+  tempo = tempo + 0.1;    
+  }
+  else{}
+  if(tempo>=3){
+    tempo=0;
+  }
+  else{}
+  }
+  else{}
+}
+  else{
+    if(mov==6 || mov==16){
+    tempo = 0;
+    mov=5;
+  }
+    else{}
+}
+
+
+image(npccida4, 190, 430);
+  
+  
+if(keyIsDown(90)){
+  inte=2;
+}
+  else{}
+  
+if(keyIsDown(88)){
+  inte=1;
+}
+  else{}
+
+
+  if(inte==2){
+    if(x1>92&&x1<145&&y1>=240&&y1<275){
+      
+      strokeWeight(5);
+      stroke(240, 220, 70, 250)
+      fill(50, 110, 250, 180)
+      rect(70, 50, 450, 280);
+      
+      textSize(20);
+      noStroke();
+      fill(0, 0, 0, 250);
+      text('Olá, bem vinda a Cidade Tranquila.', 90, 80);
+      text('Se bem que nós estamos mais para uma vila...', 90, 110);
+      text('De qualquer forma, meu nome é Diego, eu', 90, 150);
+      text('sou um construtor e inventor.', 90, 180);
+      text('Eu crio', 90, 210);
+      text('a partir de', 229, 210);
+      text('distintos.', 412, 210);
+      text('Se você tiver materiais, e precisar', 90, 240);
+      text('construir algo, me encontre na casa', 90, 270);
+      text('azul.', 90, 300);
+      
+      textSize(20);
+      noStroke();
+      fill(240, 220, 70, 250);
+      text('objetos', 158, 210);
+      text('materiais', 325, 210);
+      
+    }
+    else{}
+  }
+  else{}
+  
+  if(inte==2){
+    if(x1>314&&x1<=360&&y1>=220&&y1<240){
+      if(reinte==0){
+        
+      strokeWeight(5);
+      stroke(240, 220, 70, 250)
+      fill(50, 110, 250, 180)
+      rect(70, 50, 350, 100);
+      
+      textSize(20);
+      noStroke();
+      fill(0, 0, 0, 250);
+      text('i) Entrar na casa...', 90, 90);
+      text('j) Sair...', 90, 120);
+        
+        if(keyIsDown(73)){
+          reinte=1;
+        }
+        else{}
+        if(keyIsDown(74)){
+          reinte=0;
+          inte=1;
+        }
+        else{}
+        
+      }
+      else{}
+      
+      if(reinte==1){
+        
+      strokeWeight(5);
+      stroke(240, 220, 70, 250)
+      fill(50, 110, 250, 180)
+      rect(70, 50, 350, 100);
+      
+      textSize(20);
+      noStroke();
+      fill(0, 0, 0, 250);
+      text('Pode entrar!', 90, 90);
+      text('c) Entrar...', 250, 130);
+        
+        if(keyIsDown(67)){
+          reinte=0;
+          inte=1;
+          tela=130;
+        }
+        else{}
+        
+      }
+      else{}
+    }
+    else{}
+  }
+  else{}
+  
+
+} //Fase1 Cidade Tranquila
+  else{}
+  
+if(tela==130){
+  clear();
+  image(intinven, 0, 0);
+  image(invendia, 0, 120);
+  image(persodia, 330, 115);
+  
+  if(reinte==0){
+    
+      strokeWeight(5);
+      stroke(240, 220, 70, 250)
+      fill(50, 110, 250, 200)
+      rect(70, 50, 450, 220);
+  
+      textSize(20);
+      noStroke();
+      fill(0, 0, 0, 250);
+      text('Sou construtor, inventor, médico e professor.', 90, 80);
+      text('Bem vinda à minha casa e escritório, Alice.', 90, 110);
+      text('Do que você precisa?', 90, 140);
+      text('i) Você sabe para onde foi meu coelho?', 90, 190);
+      text('j) Quero construir algo!', 90, 220);
+      text('k) Sair...', 90, 250);
+    
+      if(keyIsDown(73)){
+        reinte=10;
+      }
+      else{}
+      if(keyIsDown(74)){
+        reinte=20;
+      }
+      else{}
+      if(keyIsDown(75)){
+        reinte=0;
+        inte=1;
+        tela=13;
+        x1=348;
+        y1=248;
+      }
+    
+  }
+  else{}
+  
+  if(reinte==10){
+    
+      strokeWeight(5);
+      stroke(240, 220, 70, 250)
+      fill(50, 110, 250, 200)
+      rect(70, 50, 450, 250);
+  
+      textSize(20);
+      noStroke();
+      fill(0, 0, 0, 250);
+      text('Eu vi o seu coelho passar pela nossa cidade', 90, 80);
+      text('mais cedo. Ele seguiu para a direita, foi', 90, 110);
+      text('até o penhasco, e passou pela ponte.', 90, 140);
+      text('Agora, ele provavelmente deve estar depois', 90, 180);
+      text('da cidade, no Vale de Flores.', 90, 210);
+      text('c) Continuar...', 270, 270);
+    
+      if(keyIsDown(67)){
+        reinte=11;
+      }
+      else{}
+    
+  }
+  else{}
+  if(reinte==11){
+    
+    strokeWeight(5);
+    stroke(240, 220, 70, 250)
+    fill(50, 110, 250, 200)
+    rect(70, 50, 480, 280);
+  
+    textSize(20);
+    noStroke();
+    fill(0, 0, 0, 250);
+    text('Infelizmente, logo após o seu coelho ter passado,', 90, 80);
+    text('um homem esquisito apareceu na frente da ponte,', 90, 110);
+    text('e ele só deixa as pessoas passarem se elas', 90, 140);
+    text('fizerem algo para ele... Que cara estranho...', 90, 170);
+    text('Se você está atrás do seu coelho, deverá ir', 90, 210);
+    text('até o penhasco, à direita da cidade, e', 90, 240);
+    text('dar a esse homem o que ele pede.', 90, 270);
+    text('i) Continuar...', 290, 310);
+    
+    if(keyIsDown(73)){
+      reinte=12
+    }
+    else{}
+    
+  }
+  else{}
+  if(reinte==12){
+    
+    strokeWeight(5);
+    stroke(240, 220, 70, 250)
+    fill(50, 110, 250, 200)
+    rect(70, 50, 450, 250);
+  
+    textSize(20);
+    noStroke();
+    fill(0, 0, 0, 250);
+    text('Se você precisar de qualquer ajuda para', 90, 80);
+    text('concluir esta tarefa, conte comigo.', 90, 110);
+    text('Procure pela cidade, fale com as pessoas,', 90, 150);
+    text('veja o que esse homem quer, e depois,', 90, 180);
+    text('venha até mim; resolveremos esse caso.', 90, 210);
+    text('c) Uau... Obrigada!', 270, 270);
+    
+    if(keyIsDown(67)){
+      reinte=0;
+    }
+    else{}
+    
+  }
+  else{}
+  
+  if(reinte==20){
+    
+    strokeWeight(5);
+    stroke(240, 220, 70, 250)
+    fill(50, 110, 250, 200)
+    rect(70, 50, 450, 250);
+  
+    textSize(20);
+    noStroke();
+    fill(0, 0, 0, 250);
+    text('Quer construir algo?', 90, 80);
+    text('Tenha em mente que você deve me trazer', 90, 120);
+    text('os', 90, 150);
+    text('necessários para construir o', 205, 150);
+    text('objeto.', 90, 180);
+    text('E que cada objeto deve ser construido com', 90, 210);
+    text('os materiais corretos.', 90, 240);
+    text('c) Tudo bem!', 270, 280);
+    
+    textSize(20);
+    noStroke();
+    fill(240, 220, 70, 250);
+    text('materiais', 117, 150);
+    
+    if(keyIsDown(67)){
+      reinte=30;
+    }
+    else{}
+    
+  }
+  else{}
+  
+  if(reinte==30){
+    
+    strokeWeight(5);
+    stroke(240, 220, 70, 250)
+    fill(50, 110, 250, 200)
+    rect(70, 50, 430, 200);
+  
+    textSize(20);
+    noStroke();
+    fill(0, 0, 0, 250);
+    text('O que você deseja construir, Alice?', 90, 90);
+    text('i) Um martelo!', 90, 130);
+    text('j) Uma tesoura!', 90, 160);
+    text('k) Acho que nada...', 90, 190);
+    
+    if(keyIsDown(73)){
+      reinte=40;
+    }
+    else{}
+    if(keyIsDown(74)){
+      reinte=51;
+    }
+    else{}
+    if(keyIsDown(75)){
+      inte=1;
+      reinte=50;
+    }
+    else{}
+    
+  }
+  else{}
+  
+  if(reinte==40){
+    
+    strokeWeight(5);
+    stroke(240, 220, 70, 250)
+    fill(50, 110, 250, 200)
+    rect(70, 50, 450, 220);
+  
+    textSize(20);
+    noStroke();
+    fill(0, 0, 0, 250);
+    text('Para construir um martelo eu vou precisar', 90, 80);
+    text('de', 90, 110);
+    text('para fazer um cabo leve, flexível e', 195, 110)
+    text('resistente. E para a ponta, precisarei de', 90, 140);
+    text(', para que seja duro e capaz de martelar', 133, 170);
+    text('sem se quebrar, ou amassar.', 90, 200);
+    text('c) Continuar...', 270, 240);
+    
+    
+    textSize(20);
+    noStroke();
+    fill(240, 220, 70, 250);
+    text('madeira', 117, 110);
+    text('ferro', 90, 170);
+    
+    if(keyIsDown(67)){
+      reinte=41;
+    }
+    else{}
+    
+  }
+  else{}
+  if(reinte==41){
+    
+    strokeWeight(5);
+    stroke(240, 220, 70, 250)
+    fill(50, 110, 250, 200)
+    rect(70, 50, 400, 180);
+  
+    textSize(20);
+    noStroke();
+    fill(0, 0, 0, 250);
+    text('Você tem tudo isso, Alice?', 90, 90);
+    text('i) Sim!', 90, 140);
+    text('j) Eu acho que não...', 90, 180);
+    
+    if(keyIsDown(73)){
+      if(madeirainv==1&&ferroinv==1){
+        reinte=42;
+      }
+      else{
+        reinte=49
+      }
+    }
+    else{}
+    if(keyIsDown(74)){
+      reinte=49
+    }
+    else{}
+    
+  }
+  else{}
+  if(reinte==42){
+    
+    strokeWeight(5);
+    stroke(240, 220, 70, 250)
+    fill(50, 110, 250, 200)
+    rect(70, 50, 400, 180);
+  
+    textSize(20);
+    noStroke();
+    fill(0, 0, 0, 250);
+    text('Me dê um minuto...', 90, 90);
+    text('c) Esperar...', 250, 200);
+    
+    if(keyIsDown(67)){
+      reinte=43;
+    }
+    else{}
+    
+  }
+  else{}
+  if(reinte==43){
+    
+    strokeWeight(5);
+    stroke(240, 220, 70, 250)
+    fill(50, 110, 250, 200)
+    rect(70, 50, 440, 240);
+  
+    textSize(20);
+    noStroke();
+    fill(0, 0, 0, 250);
+    text('Está aqui. Um martelo feito com um cabo', 90, 90);
+    text('de madeira, e uma ponta de ferro.', 90, 120);
+    text('i) Que legal! Muito obrigada!', 220, 255);
+    
+    image(martelo, 230, 130);
+    
+    if(keyIsDown(73)){
+      reinte=44;
+      marteloinv=1;
+    }
+    else{}
+    
+  }
+  else{}
+  if(reinte==44){
+    
+    strokeWeight(5);
+    stroke(240, 220, 70, 250)
+    fill(50, 110, 250, 200)
+    rect(70, 50, 460, 305);
+  
+    textSize(20);
+    noStroke();
+    fill(0, 0, 0, 250);
+    text('Use-o com cuidado.', 90, 80);
+    text('A dureza do metal na sua ponta pode machucar', 90, 110);
+    text('alguém fácil, mas também pode facilmente', 90, 140);
+    text('martelar algo que você queira, sem ser', 90, 170);
+    text('danificado.', 90, 200);
+    text('É isso. Se precisar de mim para fazer outro', 90, 240);
+    text('objeto, basta que você me traga os materiais.', 90, 270);
+    text('Posso fazer quantas vezes você precisar.', 90, 300);
+    text('c) Obrigada!', 270, 335);
+    
+    if(keyIsDown(67)){
+      inte=1;
+      reinte=0;
+    }
+    else{}
+    
+  }
+  else{}
+  if(reinte==49){
+    
+    strokeWeight(5);
+    stroke(240, 220, 70, 250)
+    fill(50, 110, 250, 200)
+    rect(70, 50, 430, 250);
+  
+    textSize(20);
+    noStroke();
+    fill(0, 0, 0, 250);
+    text('Lamento, Alice, mas vou precisar de', 90, 80);
+    text('cada um desses materiais para construir', 90, 110);
+    text('um martelo funcional.', 90, 140);
+    text('Procure pela cidade por alguém que possa', 90, 170);
+    text('te dar esses materiais. Quando você', 90, 200);
+    text('consegui-los, farei para você.', 90, 230);
+    text('c) Tudo bem...', 270, 275);
+    
+    if(keyIsDown(67)){
+      reinte=0;
+    }
+    else{}
+    
+  }
+  else{}
+  if(reinte==50){
+    
+    strokeWeight(5);
+    stroke(240, 220, 70, 250)
+    fill(50, 110, 250, 200)
+    rect(70, 50, 430, 200);
+  
+    textSize(20);
+    noStroke();
+    fill(0, 0, 0, 250);
+    text('Não se preocupe. Estarei aqui se precisar', 90, 90);
+    text('de mim para algo.', 90, 120);
+    text('c) Voltar...', 270, 220);
+    
+    if(keyIsDown(67)){
+      inte=1;
+      reinte=0;
+    }
+    else{}
+    
+  }
+  else{}
+  if(reinte==51){
+    
+    strokeWeight(5);
+    stroke(240, 220, 70, 250)
+    fill(50, 110, 250, 200)
+    rect(70, 50, 450, 220);
+  
+    textSize(20);
+    noStroke();
+    fill(0, 0, 0, 250);
+    text('Para construir uma tesoura eu vou precisar de', 90, 80);
+    text('e', 137, 110);
+    text('.', 207, 110);
+    text('O ferro para a parte dura e cortante da', 90, 140);
+    text('tesoura, e o tecido para fazer um revestimento', 90, 170);
+    text('macio; para que você segure a tesoura sem', 90, 200);
+    text('se machucar.', 90, 230);
+    text('c) Continuar...', 270, 250);
+    
+    textSize(20);
+    noStroke();
+    fill(240, 220, 70, 250);
+    text('ferro', 90, 110);
+    text('tecido', 154, 110);
+    
+    if(keyIsDown(67)){
+      reinte=52;
+    }
+    else{}
+    
+    
+  }
+  else{}
+  if(reinte==52){
+    
+    strokeWeight(5);
+    stroke(240, 220, 70, 250)
+    fill(50, 110, 250, 200)
+    rect(70, 50, 400, 180);
+  
+    textSize(20);
+    noStroke();
+    fill(0, 0, 0, 250);
+    text('Você tem tudo isso, Alice?', 90, 90);
+    text('i) Sim!', 90, 140);
+    text('j) Eu acho que não...', 90, 180);
+    
+    if(keyIsDown(73)){
+      if(tecidoinv==1&&ferroinv==1){
+        reinte=53;
+      }
+      else{
+        reinte=59
+      }
+    }
+    else{}
+    if(keyIsDown(74)){
+      reinte=59
+    }
+    else{}
+    
+  }
+  else{}
+  if(reinte==53){
+    
+    strokeWeight(5);
+    stroke(240, 220, 70, 250)
+    fill(50, 110, 250, 200)
+    rect(70, 50, 400, 180);
+  
+    textSize(20);
+    noStroke();
+    fill(0, 0, 0, 250);
+    text('Me dê um minuto...', 90, 90);
+    text('c) Esperar...', 250, 200);
+    
+    if(keyIsDown(67)){
+      reinte=54;
+    }
+    else{}
+    
+  }
+  else{}
+  if(reinte==54){
+    
+    strokeWeight(5);
+    stroke(240, 220, 70, 250)
+    fill(50, 110, 250, 200)
+    rect(70, 50, 440, 240);
+  
+    textSize(20);
+    noStroke();
+    fill(0, 0, 0, 250);
+    text('Está aqui.', 90, 90);
+    text('Uma tesoura feita com ferro e tecido.', 90, 120);
+    text('i) Que legal! Muito obrigada!', 220, 255);
+    
+    image(tesoura, 180, 120);
+    
+    
+    if(keyIsDown(73)){
+      reinte=55;
+      tesourainv=1;
+    }
+    else{}
+    
+  }
+  else{}
+  if(reinte==55){
+    
+    strokeWeight(5);
+    stroke(240, 220, 70, 250)
+    fill(50, 110, 250, 200)
+    rect(70, 50, 460, 305);
+  
+    textSize(20);
+    noStroke();
+    fill(0, 0, 0, 250);
+    text('Use-a com cuidado.', 90, 80);
+    text('O metal afiado e resistente da tesoura pode', 90, 110);
+    text('cortar fácil, e machucar você ou os outros;', 90, 140);
+    text('mas também pode realizar bem a sua tarefa', 90, 170);
+    text('de cortar um papel, ou uma corda.', 90, 200);
+    text('É isso. Se precisar de mim para fazer outro', 90, 240);
+    text('objeto, basta que você me traga os materiais.', 90, 270);
+    text('Posso fazer quantas vezes você precisar.', 90, 300);
+    text('c) Obrigada!', 270, 335);
+    
+    if(keyIsDown(67)){
+      inte=1;
+      reinte=0;
+    }
+    else{}
+    
+  }
+  else{}
+  if(reinte==59){
+    
+    strokeWeight(5);
+    stroke(240, 220, 70, 250)
+    fill(50, 110, 250, 200)
+    rect(70, 50, 430, 250);
+  
+    textSize(20);
+    noStroke();
+    fill(0, 0, 0, 250);
+    text('Lamento, Alice, mas vou precisar de', 90, 80);
+    text('cada um desses materiais para construir', 90, 110);
+    text('uma tesoura funcional.', 90, 140);
+    text('Procure pela cidade por alguém que possa', 90, 170);
+    text('te dar esses materiais. Quando você', 90, 200);
+    text('consegui-los, farei para você.', 90, 230);
+    text('c) Tudo bem...', 270, 275);
+    
+    if(keyIsDown(67)){
+      reinte=0;
+    }
+    else{}
+    
+  }
+  else{}
+  
+} //Fase1 Interior da Casa do Inventor
+  else{}
+  
+if(tela==14){
+  clear()
+  image(cidade1dir, 0, 0);
+  
+  noStroke()
+  fill(20, 20, 20, 120);
+  ellipse(448, 396, 40, 7);
+  
+  image(garotaazul, 420, 330);
+  
+  if(x1>396&&x1<452&&y1>=350&&y1<365){
+    strokeWeight(2);
+    stroke(0, 120, 250, 250);
+    fill(240, 220, 70, 190);
+    ellipse(449, 415, 50, 20);
+}
+  else{
+    strokeWeight(3);
+    stroke(50, 110, 250, 250);
+    fill(20, 20, 20, 60);
+    ellipse(449, 415, 50, 20);
+  }
+  
+  
+  
+if(x1<-40){
+  tela=13
+  x1=566
+}
+  else{}
+if(x1>595){
+  tela=17;
+  x1=-16;
+  y1=400;
+  musivila1.stop();
+  musipenhasco.loop(0, 1, 3);
+  
+}
+  else{}
+  
+if(mov==1){
+  image(perdirpar, x1, y1);
+  noStroke()
+  fill(20, 20, 20, 70);
+  ellipse(x1+25, y1+68, 35, 5);
+}
+  else{}
+if(mov==2){
+  image(perdirand, x1, y1);
+  noStroke()
+  fill(20, 20, 20, 70);
+  ellipse(x1+25, y1+68, 35, 5);
+}
+  else{}
+if(mov==3){
+  image(peresqpar, x1, y1);
+  noStroke()
+  fill(20, 20, 20, 70);
+  ellipse(x1+25, y1+68, 35, 5);
+}
+  else{}
+if(mov==4){
+  image(peresqand, x1, y1);
+  noStroke()
+  fill(20, 20, 20, 70);
+  ellipse(x1+25, y1+68, 35, 5);
+}
+  else{}
+if(mov==5){
+  image(perbaipar, x1, y1);
+  noStroke()
+  fill(20, 20, 20, 70);
+  ellipse(x1+25, y1+64, 35, 5);
+}
+  else{}
+if(mov==6){
+  image(perbaiand, x1, y1);
+  noStroke()
+  fill(20, 20, 20, 70);
+  ellipse(x1+25, y1+64, 35, 5);
+}
+  else{}
+if(mov==7){
+  image(percimpar, x1, y1);
+  noStroke()
+  fill(20, 20, 20, 70);
+  ellipse(x1+25, y1+70, 35, 5);
+}
+  else{}
+if(mov==8){
+  image(percimand, x1, y1);
+  noStroke()
+  fill(20, 20, 20, 70);
+  ellipse(x1+25, y1+70, 35, 5);
+}
+  else{}
+if(mov==12){
+  image(perdirand2, x1, y1);
+  noStroke()
+  fill(20, 20, 20, 70);
+  ellipse(x1+25, y1+68, 35, 5);
+}
+  else{}
+if(mov==14){
+  image(peresqand2, x1, y1);
+  noStroke()
+  fill(20, 20, 20, 70);
+  ellipse(x1+25, y1+68, 35, 5);
+}
+  else{}
+if(mov==16){
+  image(perbaiand2, x1, y1);
+  noStroke()
+  fill(20, 20, 20, 70);
+  ellipse(x1+25, y1+64, 35, 5);
+}
+  else{}
+if(mov==18){
+  image(percimand2, x1, y1);
+  noStroke()
+  fill(20, 20, 20, 70);
+  ellipse(x1+25, y1+70, 35, 5);
+}
+  else{}
+  
+
+  
+  if(keyIsDown(LEFT_ARROW)){
+if(x1>474&&y1<=350 || y1>=350 || x1<=376)
+  if(tempo<=1.5){
+    mov=4;
+    x1=x1-2
+    tempo = tempo + 0.1;
+  }
+  else{}
+  if(tempo>1.5&&tempo<3){
+    mov=14;
+    x1 = x1-2;
+    tempo = tempo + 0.1;
+  }
+  else{}
+  if(tempo>=3){
+    tempo = 0;
+  }
+  else{}
+}
+  else{
+    if(mov==4 || mov==14){
+      tempo=0;
+      mov=3;
+    }
+    else{}
+  }
+  
+  if(keyIsDown(RIGHT_ARROW)){
+if(x1<376&&y1<350 || y1>=350 || x1>=474){
+  if(tempo<=1.5){
+  mov=2;
+  x1=x1+2;
+  tempo = tempo + 0.1;
+  }
+  else{}
+  if(tempo>1.5&&tempo<3){
+      mov=12;
+      x1=x1+2
+      tempo = tempo + 0.1;
+  }
+  else{}
+  if(tempo>=3){
+    tempo=0;
+  }
+  else{}
+}
+  else{}
+}
+  else{
+    if(mov==2 || mov==12){
+      tempo=0;
+      mov=1;
+    }
+    else{}
+  }
+  
+  if(keyIsDown(UP_ARROW)){
+if(y1>320&&x1<=376 || x1>=376&&y1>350&&x1<474 || x1>=474&&y1>320){
+  if(tempo<=1.5){
+  mov=8;
+  y1=y1-2
+  tempo = tempo + 0.1;  
+  }  
+  else{}
+  if(tempo>1.5&&tempo<3){
+    mov=18
+    y1=y1-2
+    tempo=tempo+0.1;
+  }
+  else{}
+  if(tempo>=3){
+    tempo=0;
+  }
+  else{}
+}
+  else{}
+}
+  else{
+    if(mov==8 || mov==18){
+      tempo=0;
+      mov=7;
+    }
+    else{}
+  }
+  
+  if(keyIsDown(DOWN_ARROW)){
+if(y1<420){
+  if(tempo<=1.5){
+  mov=6;
+  y1=y1+2
+  tempo = tempo + 0.1;
+  }
+  else{}
+  if(tempo>1.5&&tempo<3){
+  mov=16;
+  y1=y1+2
+  tempo = tempo + 0.1;    
+  }
+  else{}
+  if(tempo>=3){
+    tempo=0;
+  }
+  else{}
+}
+  else{}
+}
+  else{
+    if(mov==6 || mov==16){
+    tempo = 0;
+    mov=5;
+  }
+    else{}
+}
+  
+  
+if(keyIsDown(90)){
+  inte=2;
+}
+  else{}
+  
+if(keyIsDown(88)){
+  inte=1;
+}
+  else{}
+  
+  
+  if(inte==2){
+    if(x1>396&&x1<452&&y1>=350&&y1<365){
+      if(reinte==0){
+        
+      strokeWeight(5);
+      stroke(240, 220, 70, 250)
+      fill(50, 110, 250, 180)
+      rect(70, 50, 450, 250);
+      
+      textSize(20);
+      noStroke();
+      fill(0, 0, 0, 250);
+      text('Hmm? Ah! Olá mocinha! Tudo bem com você?', 90, 80);
+      text('Meu nome é Tai, eu vim de um canto bem', 90, 110);
+      text('longe... E ainda estou com essas roupas', 90, 140);
+      text('quentes! Preciso trocar esse', 90, 170);
+      text('!', 406, 170);
+      text('i) Me conte sobre o tecido...', 90, 210);
+      text('j) Você pode me dar um pouco de tecido?', 90, 240);
+      text('k) Sair...', 90, 270);
+
+      textSize(20);
+      noStroke();
+      fill(240, 220, 70, 250);
+      text('tecido', 350, 170);
+        
+        if(keyIsDown(73)){
+          reinte=10;
+        }
+        else{}
+        if(keyIsDown(74)){
+          reinte=20;
+        }
+        else{}
+        if(keyIsDown(75)){
+          reinte=0;
+          inte=1;
+        }
+        else{}
+        
+      }
+      else{}
+      
+      if(reinte>0){
+        image(azuldia, 0, 150);
+        image(persodia, 330, 115);
+      }
+      else{}
+      
+      if(reinte==10){
+        
+       strokeWeight(5);
+       stroke(240, 220, 70, 250)
+       fill(50, 110, 250, 180)
+       rect(70, 50, 440, 300);
+      
+      textSize(20);
+      noStroke();
+      fill(0, 0, 0, 250);
+      text('Os', 90, 80);
+      text('são materiais bem levinhos!', 191, 80);
+      text('Eles são feitos de fios bem finos, e por isso', 90, 120);
+      text('são tão leves e flexíveis.', 90, 150);
+      text('Esses fios são feitos de seda, ou algum outro', 90, 180);
+      text('produto como uma linha. Essas linhas são', 90, 210);
+      text('entrelaçadas entre si, e formam o tecido; um', 90, 240);
+      text('material super leve, super flexível e bem', 90, 270);
+      text('molinho!', 90, 300);
+      text('c) Continuar...', 270, 330);
+      
+        
+      textSize(20);
+      noStroke();
+      fill(240, 220, 70, 250);
+      text('tecidos', 122, 80);
+        
+        if(keyIsDown(67)){
+          reinte=11;
+        }
+        else{}
+        
+      }
+      else{}
+      if(reinte==11){
+        
+       strokeWeight(5);
+       stroke(240, 220, 70, 250)
+       fill(50, 110, 250, 180)
+       rect(70, 50, 440, 300);
+      
+       textSize(20);
+       noStroke();
+       fill(0, 0, 0, 250);
+       text('Dependendo das linhas usadas, o tecido pode', 90, 80);
+       text('ser diferente. Se forem usadas linhas finas,', 90, 110);
+       text('o tecido se torna fino, e não é tão quente.', 90, 140);
+       text('Se forem usadas linhas grossas, o tecido', 90, 170);
+       text('fica grosso, e protege bem do frio.', 90, 200);
+       text('Então, dependendo das linhas usadas, o', 90, 240);
+       text('tecido pode ser mais fino ou mais grosso,', 90, 270);
+       text('mais ou menos quentinho...', 90, 300);
+       text('i) Continuar...', 270, 330);
+        
+       if(keyIsDown(73)){
+         reinte=12;
+       }
+        else{}
+        
+      }
+      else{}
+      if(reinte==12){
+        
+      strokeWeight(5);
+      stroke(240, 220, 70, 250)
+      fill(50, 110, 250, 180)
+      rect(70, 50, 440, 300);
+      
+      textSize(20);
+      noStroke();
+      fill(0, 0, 0, 250);
+      text('Os tecidos estão presentes em vários objetos', 90, 80);
+      text('macios e quentinhos!', 90, 110);
+      text('As nossas roupas são feitas de tecido, o', 90, 150);
+      text('lençol da nossa cama, as meias dos nossos', 90, 180);
+      text('sapatos...', 90, 210);
+      text('Eles não são duros nem pesados; são leves e', 90, 240);
+      text('flexíveis, macios e aconchegantes!', 90, 270);
+      text('c) Que bacana!', 270, 320);
+        
+        if(keyIsDown(67)){
+          reinte=0;
+        }
+        else{}
+        
+      }
+      else{}
+      
+      if(reinte==20){
+        
+      strokeWeight(5);
+      stroke(240, 220, 70, 250)
+      fill(50, 110, 250, 180)
+      rect(70, 50, 440, 300);
+      
+      textSize(20);
+      noStroke();
+      fill(0, 0, 0, 250);
+      text('Alice o seu nome, não é?', 90, 80);
+      text('Eu gostei muito de você! Engraçada, curiosa', 90, 120);
+      text('e muito fofinha!', 90, 150);
+      text('Eu tenho um bom pedaço de tecido aqui', 90, 180);
+      text('comigo, e vou te dar!', 90, 210);
+      text('Mas antes, vou te ensinar como usar, e o', 90, 240);
+      text('que fazer com o tecido.', 90, 270);
+      text('c) Está bem...', 270, 320);
+        
+        if(keyIsDown(67)){
+          reinte=21;
+        }
+        else{}
+
+    
+        
+      }
+      else{}
+      if(reinte==21){
+        
+      strokeWeight(5);
+      stroke(240, 220, 70, 250)
+      fill(50, 110, 250, 180)
+      rect(70, 50, 440, 300);
+      
+      textSize(20);
+      noStroke();
+      fill(0, 0, 0, 250);
+      text('Os tecidos não são resistentes, e são flexíveis', 90, 80);
+      text('de mais. Se você tentar fazer uma tesoura de', 90, 110);
+      text('tecidos, ela não conseguirá cortar nada!', 90, 140);
+      text('Afinal, para que a tesoura corte, ela precisa', 90, 170);
+      text('ser bem dura e afiada, e os tecidos não são!', 90, 200);
+      text('Os tecidos são muito moles e macios, você', 90, 240);
+      text('deve fazer coisas flexíveis e leves com', 90, 270);
+      text('eles.', 90, 300);
+      text('j) Tudo bem...', 270, 320);
+        
+        if(keyIsDown(74)){
+          reinte=22;
+        }
+        else{}
+        
+      }
+      else{}
+      if(reinte==22){
+        
+      strokeWeight(5);
+      stroke(240, 220, 70, 250)
+      fill(50, 110, 250, 180)
+      rect(70, 50, 440, 300);
+      
+      textSize(20);
+      noStroke();
+      fill(0, 0, 0, 250);
+      text('Então está certo!', 90, 80);
+      text('Pegue este', 90, 120);
+      text('para você!', 312, 120);
+      text('É seu, use para fazer algo legal.', 90, 150);
+      text('Só não se esqueça das', 90, 180);
+      text('dos', 428, 180);
+      text('tecidos!', 90, 210);
+      text('c) Muito obrigada!', 270, 320);
+        
+      textSize(20);
+      noStroke();
+      fill(240, 220, 70, 250);
+      text('novelo de lã', 198, 120);
+      text('propriedades', 305, 180);
+        
+      image(tecido, 200, 180);
+        
+        if(keyIsDown(67)){
+          reinte=0;
+          tecidoinv=1;
+        }
+        else{}
+        
+      }
+      else{}
+      
+    }
+    else{}
+  }
+  else{}
+  
+  
+} //Fase1 Cidade Tranquila Direita
+  else{}
+  
+if(tela==15){
+  clear();
+  image(cidade1cim, 0, 0);
+  
+  noStroke();
+  fill(20, 20, 20, 150);
+  rect(36, 254, 196, 12);
+  rect(21, 195, 15, 71);
+  ellipse(260, 258, 40, 5);
+  
+  fill(20, 20, 20, 120);
+  ellipse(305, 257, 40, 7);
+  
+  image(casarosa, 0, 60);
+  image(garotarosa, 280, 190);
+  
+  
+  if(x1>262&&x1<310&&y1>=210&&y1<235){
+  strokeWeight(2);
+  stroke(0, 120, 250, 250);
+  fill(240, 220, 70, 190);
+  ellipse(307, 275, 50, 20);
+}
+  else{
+    strokeWeight(3);
+    stroke(50, 110, 250, 250);
+    fill(20, 20, 20, 60);
+    ellipse(307, 275, 50, 20);
+  }
+  
+  if(x1>70&&x1<135&&y1>=210&&y1<230){
+    strokeWeight(2);
+    stroke(0, 120, 250, 250);
+    fill(240, 220, 70, 190);
+    ellipse(125, 277, 65, 25);
+}
+  else{
+    strokeWeight(3);
+    stroke(50, 110, 250, 250);
+    fill(20, 20, 20, 60);
+    ellipse(125, 277, 65, 25);
+  }
+  
+  
+if(y1==500){
+  x1=250;
+  y1=132;
+  tela=13
+}
+  else{}
+  
+if(mov==1){
+  image(perdirpar, x1, y1);
+  noStroke()
+  fill(20, 20, 20, 70);
+  ellipse(x1+25, y1+68, 35, 5);
+}
+  else{}
+if(mov==2){
+  image(perdirand, x1, y1);
+  noStroke()
+  fill(20, 20, 20, 70);
+  ellipse(x1+25, y1+68, 35, 5);
+}
+  else{}
+if(mov==3){
+  image(peresqpar, x1, y1);
+  noStroke()
+  fill(20, 20, 20, 70);
+  ellipse(x1+25, y1+68, 35, 5);
+}
+  else{}
+if(mov==4){
+  image(peresqand, x1, y1);
+  noStroke()
+  fill(20, 20, 20, 70);
+  ellipse(x1+25, y1+68, 35, 5);
+}
+  else{}
+if(mov==5){
+  image(perbaipar, x1, y1);
+  noStroke()
+  fill(20, 20, 20, 70);
+  ellipse(x1+25, y1+64, 35, 5);
+}
+  else{}
+if(mov==6){
+  image(perbaiand, x1, y1);
+  noStroke()
+  fill(20, 20, 20, 70);
+  ellipse(x1+25, y1+64, 35, 5);
+}
+  else{}
+if(mov==7){
+  image(percimpar, x1, y1);
+  noStroke()
+  fill(20, 20, 20, 70);
+  ellipse(x1+25, y1+70, 35, 5);
+}
+  else{}
+if(mov==8){
+  image(percimand, x1, y1);
+  noStroke()
+  fill(20, 20, 20, 70);
+  ellipse(x1+25, y1+70, 35, 5);
+}
+  else{}
+if(mov==12){
+  image(perdirand2, x1, y1);
+  noStroke()
+  fill(20, 20, 20, 70);
+  ellipse(x1+25, y1+68, 35, 5);
+}
+  else{}
+if(mov==14){
+  image(peresqand2, x1, y1);
+  noStroke()
+  fill(20, 20, 20, 70);
+  ellipse(x1+25, y1+68, 35, 5);
+}
+  else{}
+if(mov==16){
+  image(perbaiand2, x1, y1);
+  noStroke()
+  fill(20, 20, 20, 70);
+  ellipse(x1+25, y1+64, 35, 5);
+}
+  else{}
+if(mov==18){
+  image(percimand2, x1, y1);
+  noStroke()
+  fill(20, 20, 20, 70);
+  ellipse(x1+25, y1+70, 35, 5);
+}
+  else{}
+  
+  
+  if(keyIsDown(LEFT_ARROW)){
+if(x1>330&&y1<210 || y1>=210&&x1>10){
+  if(tempo<=1.5){
+    mov=4;
+    x1=x1-2
+    tempo = tempo + 0.1;
+  }
+  else{}
+  if(tempo>1.5&&tempo<3){
+    mov=14;
+    x1 = x1-2;
+    tempo = tempo + 0.1;
+  }
+  else{}
+  if(tempo>=3){
+    tempo = 0;
+  }
+  else{}
+}
+  else{}
+}
+  else{
+    if(mov==4 || mov==14){
+      tempo=0;
+      mov=3;
+    }
+    else{}
+  }
+  
+  if(keyIsDown(RIGHT_ARROW)){
+if(x1<550){
+  if(tempo<=1.5){
+  mov=2;
+  x1=x1+2;
+  tempo = tempo + 0.1;
+  }
+  else{}
+  if(tempo>1.5&&tempo<3){
+      mov=12;
+      x1=x1+2
+      tempo = tempo + 0.1;
+  }
+  else{}
+  if(tempo>=3){
+    tempo=0;
+  }
+  else{}
+}
+  else{}
+}
+  else{
+    if(mov==2 || mov==12){
+      tempo=0;
+      mov=1;
+    }
+    else{}
+  }
+  
+  if(keyIsDown(UP_ARROW)){
+if(y1>210&&x1<330 || x1>=330&&y1>180){
+  if(tempo<=1.5){
+  mov=8;
+  y1=y1-2
+  tempo = tempo + 0.1;  
+  }  
+  else{}
+  if(tempo>1.5&&tempo<3){
+    mov=18
+    y1=y1-2
+    tempo=tempo+0.1;
+  }
+  else{}
+  if(tempo>=3){
+    tempo=0;
+  }
+  else{}
+}
+  else{}
+}
+  else{
+    if(mov==8 || mov==18){
+      tempo=0;
+      mov=7;
+    }
+    else{}
+  }
+  
+  if(keyIsDown(DOWN_ARROW)){
+  if(tempo<=1.5){
+  mov=6;
+  y1=y1+2
+  tempo = tempo + 0.1;
+  }
+  else{}
+  if(tempo>1.5&&tempo<3){
+  mov=16;
+  y1=y1+2
+  tempo = tempo + 0.1;    
+  }
+  else{}
+  if(tempo>=3){
+    tempo=0;
+  }
+  else{}
+}
+  else{
+    if(mov==6 || mov==16){
+    tempo = 0;
+    mov=5;
+  }
+    else{}
+}
+  
+  if(keyIsDown(90)){
+  inte=2;
+}
+  else{}
+  
+if(keyIsDown(88)){
+  inte=1;
+}
+  else{}
+  
+  
+  if(inte==2){
+    if(x1>262&&x1<310&&y1>=210&&y1<235){
+        if(reinte==0){
+      
+      strokeWeight(5);
+      stroke(240, 220, 70, 250)
+      fill(50, 110, 250, 180)
+      rect(70, 50, 410, 240);
+      
+      textSize(20);
+      noStroke();
+      fill(0, 0, 0, 250);
+      text('Olá, eu me chamo Bia, sou uma ferreira.', 90, 80);
+      text('Eu trabalho na fabricação de coisas com', 90, 110);
+      text('. Precisa de alguma coisa?', 140, 140);
+      text('i) Me conte sobre esses metais...', 90, 190);
+      text('j) Você pode me dar um pedaço de metal?', 90, 220);
+      text('k) Sair...', 90, 250);
+      
+      textSize(20);
+      noStroke();
+      fill(240, 220, 70, 250)
+      text('metal', 90, 140);
+      
+          if(keyIsDown(73)){
+          reinte=1;
+        }
+            else{}
+          
+          if(keyIsDown(74)){
+            reinte=2;
+          }
+          else{}
+          
+          if(keyIsDown(75)){
+            inte=1;
+          }
+          else{}
+      }
+        else{}
+      
+        if(reinte==1){
+          
+      strokeWeight(5);
+      stroke(240, 220, 70, 250)
+      fill(50, 110, 250, 180)
+      rect(70, 50, 430, 220);
+      
+      textSize(20);
+      noStroke();
+      fill(0, 0, 0, 250);
+    text('Os metais são materiais duros e resistentes.', 90, 80);
+    text('Eles são excelentes na construção de coisas', 90, 110);
+    text('fortes e duráveis, como um martelo ou uma', 90, 140);
+    text('tesoura...', 90, 170);
+    text('Vamos entrar em casa para conversarmos', 90, 200);
+    text('melhor?', 90, 230);
+    text('c) Sim!', 320, 250);
+          
+        if(keyIsDown(67)){
+          reinte=0;
+          inte=1;
+        }
+          else{}
+        
+          
+        }
+        else{}
+      
+        if(reinte==2){
+          
+      strokeWeight(5);
+      stroke(240, 220, 70, 250)
+      fill(50, 110, 250, 180)
+      rect(70, 50, 430, 250);
+      
+      textSize(20);
+      noStroke();
+      fill(0, 0, 0, 250);
+      text('Você quer um pedaço de metal?', 90, 80);
+      text('Eu sou uma profissional, só posso dar', 90, 120);
+      text('materiais importantes para pessoas que', 90, 150);
+      text('conhecem e entendem suas características.', 90, 180);
+      text('Se você quer um pedaço de metal, você', 90, 210);
+      text('deve conhecer mais sobre eles primeiro.', 90, 240);
+      text('c) Voltar...', 320, 280);
+          
+          
+          if(keyIsDown(67)){
+            reinte=0;
+          }
+          else{}
+          
+          
+        }
+        else{}
+      
+    }
+    else{}
+  }
+  else{}
+  
+  if(inte==2){
+    if(x1>70&&x1<135&&y1>=210&&y1<230){
+      if(reinte==0){
+      
+    strokeWeight(5);
+    stroke(240, 220, 70, 250);
+    fill(50, 110, 250, 180);
+    rect(70, 50, 350, 120);
+    
+    
+    textSize(20);
+    noStroke()
+    fill(0, 0, 0, 250);
+    text('i) Abrir a porta.', 90, 90);
+    text('j) Cancelar...', 90, 130);
+        
+      
+      if(keyIsDown(73)){
+        reinte=1;
+      }
+        else{}
+        
+      if(keyIsDown(74)){
+        reinte=0;
+        inte=1;
+      }
+        else{}
+      
+        
+      }
+      else{} 
+      
+      if(reinte==1){
+        
+        strokeWeight(5);
+        stroke(240, 220, 70, 250);
+        fill(50, 110, 250, 180);
+        rect(70, 50, 350, 120);
+    
+    
+        textSize(20);
+        noStroke()
+        fill(0, 0, 0, 250);
+        text('Pode entrar!', 90, 90);
+        text('c) Entrar...', 270, 150);
+        
+        if(keyIsDown(67)){
+          reinte=0;
+          inte=1;
+          tela=150;
+        }
+        else{}
+        
+      }
+      else{}
+      
+    }
+    else{}
+  }
+  else{}
+  
+  
+} //Fase1 Cidade Tranquila Cima
+  else{}
+  
+if(tela==150){
+  clear();
+  image(introsa, 0, 0);
+  image(rosadia, 10, 150);
+  image(persodia, 330, 115);
+  
+    if(reinte==0){
+      
+      strokeWeight(5);
+      stroke(240, 220, 70, 250)
+      fill(50, 110, 250, 200)
+      rect(70, 50, 420, 220);
+  
+      textSize(20);
+      noStroke();
+      fill(0, 0, 0, 250);
+      text('Olá, Alice!', 90, 80);
+      text('Então, o que você quer aprender primeiro?', 90, 110);
+      text('i) Me ensine sobre os metais!', 90, 170);
+      text('j) O que eu posso fazer com os metais?', 90, 200);
+      text('k) Sair...', 90, 230);
+      
+      
+      if(keyIsDown(73)){
+        reinte=10;
+      }
+      else{}
+      
+      if(keyIsDown(74)){
+        reinte=20;
+      }
+      else{}
+      
+      if(keyIsDown(75)){
+        inte=1;
+        reinte=0;
+        tela=15;
+        x1=100;
+        y1=250;
+      }
+      else{}
+      
+      
+    }
+    else{}
+  
+    if(reinte==10){
+      
+      strokeWeight(5);
+      stroke(240, 220, 70, 250)
+      fill(50, 110, 250, 200)
+      rect(70, 50, 420, 310);
+  
+      textSize(20);
+      noStroke();
+      fill(0, 0, 0, 250);
+      text('é o nome dado a uma classe de', 145, 80);
+      text('materiais. Os metais são materiais duros,', 90, 110);
+      text('resistentes e duráveis, na maior parte', 90, 140);
+      text('das vezes...', 90, 170);
+      text('Os metais também são muito maleáveis,', 90, 200);
+      text('por mais que sejam bem duros! Se você', 90, 230)
+      text('aquecer os metais com fogo, eles se', 90, 260);
+      text('tornam moles e flexíveis. Mas só se', 90, 290);
+      text('você esquentá-los!', 90, 320);
+      text('c) Continuar...', 290, 340);
+      
+      textSize(20);
+      noStroke();
+      fill(240, 220, 70, 250);
+      text('Metal', 90, 80);
+      
+      
+      if(keyIsDown(67)){
+        reinte=11;
+      }
+      else{}
+      
+    }
+    else{}
+    if(reinte==11){
+      
+      strokeWeight(5);
+      stroke(240, 220, 70, 250)
+      fill(50, 110, 250, 200)
+      rect(70, 50, 420, 310);
+  
+      textSize(20);
+      noStroke();
+      fill(0, 0, 0, 250);
+      text('Os', 90, 80);
+      text('também possuem um belo', 185, 80);
+      text('brilho. Possuem diversas cores brilhantes', 90, 110);
+      text('como prateado, dourado, laranja... São', 90, 140);
+      text('muito lindos!', 90, 170);
+      text('Os metais também são bem pesados e', 90, 200);
+      text('pouco dobráveis. Se você quiser dobrar', 90, 230);
+      text('uma barra de metal, você vai precisar de', 90, 260);
+      text('muita força!', 90, 290);
+      text('i) Continuar...', 270, 330);
+      
+      textSize(20);
+      noStroke();
+      fill(240, 220, 70, 250);
+      text('metais', 120, 80);
+      
+      if(keyIsDown(73)){
+        reinte=12;
+      }
+      else{}
+      
+    }
+    else{}
+    if(reinte==12){
+      
+      strokeWeight(5);
+      stroke(240, 220, 70, 250)
+      fill(50, 110, 250, 200)
+      rect(70, 50, 420, 310);
+  
+      textSize(20);
+      noStroke();
+      fill(0, 0, 0, 250);
+      text('Você já deve ter visto ou ouvido falar', 90, 80);
+      text('dos metais por aí.', 90, 110);
+      text('Garfos, facas, brinquedos e ferramentas...', 90, 140);
+      text('Uma bicicleta, uma chave ou até um', 90, 170);
+      text('celular! Tem metais nessas coisas.', 90, 200);
+      text('Eles são muito úteis, e estão presentes', 90, 230);
+      text('na nossa vida; em vários objetos duros,', 90, 260);
+      text('resistentes, rígidos e brilhosos.', 90, 290);
+      text('c) Que legal!', 270, 330);
+      
+      
+      if(keyIsDown(67)){
+        reinte=0;
+      }
+      else{}
+      
+      
+    }
+    else{}
+  
+    if(reinte==20){
+     
+      strokeWeight(5);
+      stroke(240, 220, 70, 250)
+      fill(50, 110, 250, 200)
+      rect(70, 50, 420, 310);
+  
+      textSize(20);
+      noStroke();
+      fill(0, 0, 0, 250);
+      text('Hmm... Muita coisa, viu?', 90, 80);
+      text('Na verdade, você pode fazer o que quiser,', 90, 120);
+      text('mas você deve ficar atenta aos materiais', 90, 150);
+      text('usados.', 90, 180);
+      text('Por exemplo, se você quer fazer um', 90, 210);
+      text('martelo você deve usar um material bem', 90, 240);
+      text('duro e resistente na sua ponta, e um', 90, 270);
+      text('material leve e flexível no seu cabo.', 90, 300);
+      text('c) Continuar...', 270, 340);
+      
+      if(keyIsDown(67)){
+        reinte=21;
+      }
+      else{}
+      
+    }
+    else{}
+    if(reinte==21){
+      
+      strokeWeight(5);
+      stroke(240, 220, 70, 250)
+      fill(50, 110, 250, 200)
+      rect(70, 50, 420, 310);
+  
+      textSize(20);
+      noStroke();
+      fill(0, 0, 0, 250);
+      text('O martelo tem que bater com força nos', 90, 80);
+      text('pregos, sem se quebrar ou amassar; por', 90, 110);
+      text('isso ele tem que ter uma ponta feita de', 90, 140);
+      text('metal. Os metais são duros, lembra?', 90, 170);
+      text('Mas se você quiser fazer algo como um', 90, 200);
+      text('travesseiro, você não deve usar metais.', 90, 230);
+      text('Um travesseiro deve ser macio e fofinho,', 90, 260);
+      text('e não duro... Entende?', 90, 290);
+      text('j) Entendido...', 270, 330);
+      
+      if(keyIsDown(74)){
+        reinte=22;
+      }
+      else{}
+      
+      
+    }
+    else{}
+    if(reinte==22){
+      
+      strokeWeight(5);
+      stroke(240, 220, 70, 250)
+      fill(50, 110, 250, 200)
+      rect(70, 50, 420, 310);
+  
+      textSize(20);
+      noStroke();
+      fill(0, 0, 0, 250);
+      text('Agora que você entendeu sobre os metais', 90, 80);
+      text('eu posso te dar um', 90, 110);
+      text('.', 408, 110);
+      text('Use como você quiser, mas lembre-se de', 90, 140);
+      text('de suas', 90, 170);
+      text('!', 284, 170);
+      text('c) Muito obrigada!', 270, 330);
+      
+      textSize(20);
+      noStroke();
+      fill(240, 220, 70, 250);
+      text('pedaço de ferro', 267, 110);
+      text('propriedades', 165, 170);
+      
+      image(ferro, 220, 200);
+      
+      
+      if(keyIsDown(67)){
+        reinte=0;
+        ferroinv=1;
+      }
+      else{}
+      
+      
+    }
+    else{}
+
+
+
+
+} //Fase1 Interior da Casa da Ferreira
+  else{}
+
+if(tela==16){
+  clear();
+  image(cidade1bai, 0, 0);
+  
+  noStroke()
+  fill(20, 20, 20, 120);
+  rect(368, 340, 51, 22, 10);
+  ellipse(468, 372, 68, 25);
+  ellipse(393, 425, 37, 7);
+  
+  
+  image(tendamarrom, 50, 260);
+  image(madeirachao, 365, 310);
+  image(meninomarrom, 365, 360);
+  image(fogueira, 435, 320);
+  
+  
+if(y1==260&&x1>=200&&x1<=300){
+  x1=250;
+  y1=496;
+  tela=13;
+}
+  else{}
+  
+  
+  if(x1>280&&x1<320&&y1>=350&&y1<=370){
+  strokeWeight(2);
+  stroke(0, 120, 250, 250);
+  fill(240, 220, 70, 190);
+  ellipse(330, 425, 50, 15);
+}
+  else{
+  strokeWeight(3);
+  stroke(50, 110, 250, 250);
+  fill(20, 20, 20, 60);
+  ellipse(330, 425, 50, 15);
+  }
+  
+  if(x1>=200&&x1<225&&y1>297&&y1<325){
+  strokeWeight(2);
+  stroke(0, 120, 250, 250);
+  fill(240, 220, 70, 190);
+  ellipse(215, 375, 60, 20);
+}
+  else{
+  strokeWeight(3);
+  stroke(50, 110, 250, 250);
+  fill(20, 20, 20, 60);
+  ellipse(215, 375, 60, 20);
+  }
+  
+  
+if(mov==1){
+  image(perdirpar, x1, y1);
+  noStroke()
+  fill(20, 20, 20, 70);
+  ellipse(x1+25, y1+68, 35, 5);
+}
+  else{}
+if(mov==2){
+  image(perdirand, x1, y1);
+  noStroke()
+  fill(20, 20, 20, 70);
+  ellipse(x1+25, y1+68, 35, 5);
+}
+  else{}
+if(mov==3){
+  image(peresqpar, x1, y1);
+  noStroke()
+  fill(20, 20, 20, 70);
+  ellipse(x1+25, y1+68, 35, 5);
+}
+  else{}
+if(mov==4){
+  image(peresqand, x1, y1);
+  noStroke()
+  fill(20, 20, 20, 70);
+  ellipse(x1+25, y1+68, 35, 5);
+}
+  else{}
+if(mov==5){
+  image(perbaipar, x1, y1);
+  noStroke()
+  fill(20, 20, 20, 70);
+  ellipse(x1+25, y1+64, 35, 5);
+}
+  else{}
+if(mov==6){
+  image(perbaiand, x1, y1);
+  noStroke()
+  fill(20, 20, 20, 70);
+  ellipse(x1+25, y1+64, 35, 5);
+}
+  else{}
+if(mov==7){
+  image(percimpar, x1, y1);
+  noStroke()
+  fill(20, 20, 20, 70);
+  ellipse(x1+25, y1+70, 35, 5);
+}
+  else{}
+if(mov==8){
+  image(percimand, x1, y1);
+  noStroke()
+  fill(20, 20, 20, 70);
+  ellipse(x1+25, y1+70, 35, 5);
+}
+  else{}
+if(mov==12){
+  image(perdirand2, x1, y1);
+  noStroke()
+  fill(20, 20, 20, 70);
+  ellipse(x1+25, y1+68, 35, 5);
+}
+  else{}
+if(mov==14){
+  image(peresqand2, x1, y1);
+  noStroke()
+  fill(20, 20, 20, 70);
+  ellipse(x1+25, y1+68, 35, 5);
+}
+  else{}
+if(mov==16){
+  image(perbaiand2, x1, y1);
+  noStroke()
+  fill(20, 20, 20, 70);
+  ellipse(x1+25, y1+64, 35, 5);
+}
+  else{}
+if(mov==18){
+  image(percimand2, x1, y1);
+  noStroke()
+  fill(20, 20, 20, 70);
+  ellipse(x1+25, y1+70, 35, 5);
+}
+  else{}
+  
+  if(keyIsDown(LEFT_ARROW)){
+if(x1>200){
+  if(tempo<=1.5){
+    mov=4;
+    x1=x1-2
+    tempo = tempo + 0.1;
+  }
+  else{}
+  if(tempo>1.5&&tempo<3){
+    mov=14;
+    x1 = x1-2;
+    tempo = tempo + 0.1;
+  }
+  else{}
+  if(tempo>=3){
+    tempo = 0;
+  }
+  else{}
+}
+  else{}
+}
+  else{
+    if(mov==4 || mov==14){
+      tempo=0;
+      mov=3;
+    }
+    else{}
+  }
+  
+  if(keyIsDown(RIGHT_ARROW)){
+if(x1<300){
+  if(tempo<=1.5){
+  mov=2;
+  x1=x1+2;
+  tempo = tempo + 0.1;
+  }
+  else{}
+  if(tempo>1.5&&tempo<3){
+      mov=12;
+      x1=x1+2
+      tempo = tempo + 0.1;
+  }
+  else{}
+  if(tempo>=3){
+    tempo=0;
+  }
+  else{}
+}
+  else{}
+}
+  else{
+    if(mov==2 || mov==12){
+      tempo=0;
+      mov=1;
+    }
+    else{}
+  }
+  
+  if(keyIsDown(UP_ARROW)){
+if(y1>260){
+  if(tempo<=1.5){
+  mov=8;
+  y1=y1-2
+  tempo = tempo + 0.1;  
+  }  
+  else{}
+  if(tempo>1.5&&tempo<3){
+    mov=18
+    y1=y1-2
+    tempo=tempo+0.1;
+  }
+  else{}
+  if(tempo>=3){
+    tempo=0;
+  }
+  else{}
+}
+  else{}
+}
+  else{
+    if(mov==8 || mov==18){
+      tempo=0;
+      mov=7;
+    }
+    else{}
+  }
+  
+  if(keyIsDown(DOWN_ARROW)){
+if(y1<430){
+  if(tempo<=1.5){
+  mov=6;
+  y1=y1+2
+  tempo = tempo + 0.1;
+  }
+  else{}
+  if(tempo>1.5&&tempo<3){
+  mov=16;
+  y1=y1+2
+  tempo = tempo + 0.1;    
+  }
+  else{}
+  if(tempo>=3){
+    tempo=0;
+  }
+  else{}
+}
+  else{}
+}
+  else{
+    if(mov==6 || mov==16){
+    tempo = 0;
+    mov=5;
+  }
+    else{}
+}
+  
+if(keyIsDown(90)){
+  inte=2;
+}
+  else{}
+  
+if(keyIsDown(88)){
+  inte=1;
+}
+  else{}
+  
+  
+  
+  
+  if(inte==2){
+    if(280&&x1<320&&y1>=350&&y1<=370){
+      if(reinte==0){
+      
+      strokeWeight(5);
+      stroke(240, 220, 70, 250)
+      fill(50, 110, 250, 180)
+      rect(70, 50, 430, 250);
+      
+      textSize(20);
+      noStroke();
+      fill(0, 0, 0, 250);
+      text('Olá garotinha, está perdida?', 90, 80);
+      text('Eu me chamo Leo, sou aventureiro', 90, 110);
+      text('e também carpinteiro. Trabalho com', 90, 140);
+      text('coisas feitas de', 90, 170);
+      text('.', 309, 170);
+      text('i) Me conte sobre a madeira...', 90, 220);
+      text('j) Você pode me dar um pedaço de madeira?', 90, 250);
+      text('k) Sair...', 90, 280);
+      
+      textSize(20);
+      noStroke();
+      fill(240, 220, 70, 250);
+      text('madeira', 234, 170);
+        
+        if(keyIsDown(73)){
+          reinte=1;
+        }
+        else{}
+        if(keyIsDown(74)){
+          reinte=2;
+        }
+        else{}
+        if(keyIsDown(75)){
+          reinte=0;
+          inte=1;
+        }
+        else{}
+      
+      
+      }
+      else{}  
+      
+      if(reinte==1){
+        
+      strokeWeight(5);
+      stroke(240, 220, 70, 250)
+      fill(50, 110, 250, 180)
+      rect(70, 50, 430, 250);
+      
+      textSize(20);
+      noStroke();
+      fill(0, 0, 0, 250);
+      text('A madeira é um material leve e flexível.', 90, 80);
+      text('Ela é perfeita para construir coisas', 90, 110);
+      text('de sustentação ou suporte, como uma', 90, 140);
+      text('cadeira ou uma casa...', 90, 170);
+      text('Se você quiser, podemos entrar na minha', 90, 210);
+      text('tenda e eu posso te ensinar um pouco mais.', 90, 240);
+      text('c) Vamos!', 270, 285);
+        
+        if(keyIsDown(67)){
+          inte=1;
+          reinte=0;
+        }
+        else{}
+        
+      }
+      else{}
+      if(reinte==2){
+        
+      strokeWeight(5);
+      stroke(240, 220, 70, 250)
+      fill(50, 110, 250, 180)
+      rect(70, 50, 430, 250);
+      
+      textSize(20);
+      noStroke();
+      fill(0, 0, 0, 250);
+      text('Ei, eu acabei de te conhecer!', 90, 80);
+      text('Não posso te dar as minhas coisas', 90, 110);
+      text('assim do nada!', 90, 140);
+      text('Mas... Se você ainda sim quiser um pouco', 90, 180);
+      text('de madeira, sugiro entrarmos na tenda e', 90, 210);
+      text('conversarmos melhor.', 90, 240);
+      text('c) Está certo...', 270, 280);
+        
+        if(keyIsDown(67)){
+          reinte=0;
+        }
+        else{}
+        
+      }
+      else{}
+      
+    }
+    else{}
+  }
+  else{}
+  
+  if(inte==2){
+    if(x1>=200&&x1<225&&y1>297&&y1<325){
+      if(reinte==0){
+        
+      strokeWeight(5);
+      stroke(240, 220, 70, 250)
+      fill(50, 110, 250, 180)
+      rect(70, 50, 350, 105);
+      
+      textSize(20);
+      noStroke();
+      fill(0, 0, 0, 250);
+      text('i) Entrar na tenda...', 90, 90);
+      text('j) Sair...', 90, 125);
+        
+        if(keyIsDown(73)){
+          reinte=1;
+        }
+        else{}
+        if(keyIsDown(74)){
+          inte=1;
+          reinte=0;
+        }
+        else{}
+        
+        
+      }
+      else{}
+      if(reinte==1){
+        
+      strokeWeight(5);
+      stroke(240, 220, 70, 250)
+      fill(50, 110, 250, 180)
+      rect(70, 50, 350, 110);
+      
+      textSize(20);
+      noStroke();
+      fill(0, 0, 0, 250);
+      text('Pode entrar!', 90, 90);
+      text('c) Entrar...', 240, 130);
+        
+        if(keyIsDown(67)){
+          inte=1;
+          reinte=0;
+          tela=160;
+        }
+        else{}
+        
+      }
+    }
+  }
+  
+  
+} //Fase1 Cidade Tranquila Baixo
+  else{}
+  
+if(tela==160){
+  clear();
+  image(intmarrom, 0, 0);
+  image(marromdia, 0, 150);
+  image(persodia, 330, 115);
+  
+    if(reinte==0){
+      
+      strokeWeight(5);
+      stroke(240, 220, 70, 250)
+      fill(50, 110, 250, 200)
+      rect(70, 50, 420, 220);
+  
+      textSize(20);
+      noStroke();
+      fill(0, 0, 0, 250);
+      text('Bem vinda, Alice.', 90, 80);
+      text('Viemos aqui aprender sobre a madeira,', 90, 110);
+      text('não é?', 90, 140);
+      text('i) Me ensine sobre a madeira!', 90, 180);
+      text('j) O que eu posso fazer com a madeira?', 90, 210);
+      text('k) Sair...', 90, 240);
+      
+      if(keyIsDown(73)){
+        reinte=10;
+      }
+      else{}
+      if(keyIsDown(74)){
+        reinte=20;
+      }
+      else{}
+      if(keyIsDown(75)){
+        inte=1;
+        reinte=0;
+        tela=16;
+        x1=210;
+        y1=310;
+      }
+      else{}
+      
+    }
+    else{}
+  
+    if(reinte==10){
+      
+      strokeWeight(5);
+      stroke(240, 220, 70, 250)
+      fill(50, 110, 250, 200)
+      rect(70, 50, 420, 310);
+  
+      textSize(20);
+      noStroke();
+      fill(0, 0, 0, 250);
+      text('é um tipo de material que vem', 169, 80);
+      text('das árvores. É um material flexível, leve,', 90, 110);
+      text('e que tem uma boa resistência.', 90, 140);
+      text('Por ter essas propriedades, a madeira', 90, 170);
+      text('é muito usada na construção de objetos', 90, 200);
+      text('de suporte e sustentação.', 90, 230);
+      text('Ela é resistente, leve e flexível, o que', 90, 260);
+      text('faz dela um bom material para construir.', 90, 290);
+      text('c) Continuar...', 270, 330);
+      
+      
+      textSize(20);
+      noStroke();
+      fill(240, 220, 70, 250);
+      text('Madeira', 90, 80);
+      
+      
+      if(keyIsDown(67)){
+        reinte=11;
+      }
+      else{}
+      
+      
+    }
+    else{}
+    if(reinte==11){
+      
+      strokeWeight(5);
+      stroke(240, 220, 70, 250)
+      fill(50, 110, 250, 200)
+      rect(70, 50, 420, 310);
+  
+      textSize(20);
+      noStroke();
+      fill(0, 0, 0, 250);
+      text('Ela é forte o suficiente para não se', 90, 80);
+      text('quebrar facilmente. Flexível o suficiente', 90, 110);
+      text('para ser manipulada sem problema. Ela', 90, 140);
+      text('também é leve, e pode ter várias cores,', 90, 170);
+      text('dependendo da árvore que deu a madeira.', 90, 200);
+      text('A madeira não é tão resistente quanto', 90, 240);
+      text('os metais, nem tão flexível quanto os', 90, 270);
+      text('tecidos, mas um médio entre os dois.', 90, 300);
+      text('i) Continuar...', 270, 335);
+      
+      if(keyIsDown(73)){
+        reinte=12;
+      }
+      else{}
+      
+    }
+    else{}
+    if(reinte==12){
+      
+      strokeWeight(5);
+      stroke(240, 220, 70, 250)
+      fill(50, 110, 250, 200)
+      rect(70, 50, 420, 310);
+  
+      textSize(20);
+      noStroke();
+      fill(0, 0, 0, 250);
+      text('Os objetos feitos com a madeira estão em', 90, 80);
+      text('todo lugar.', 90, 110);
+      text('Armários, cadeiras, mesas, móveis...', 90, 150);
+      text('Em ferramentas, como no cabo de um', 90, 180);
+      text('martelo; em instrumentos, como um violão.', 90, 210);
+      text('É o material mais comum, presente em', 90, 240);
+      text('objetos que precisam ser flexíveis,', 90, 270);
+      text('leves e resistentes!', 90, 300);
+      text('c) Que interessante!', 270, 330);
+      
+      if(keyIsDown(67)){
+        reinte=0;
+      }
+      else{}
+      
+    }
+    else{}
+  
+    if(reinte==20){
+      
+      strokeWeight(5);
+      stroke(240, 220, 70, 250)
+      fill(50, 110, 250, 200)
+      rect(70, 50, 420, 310);
+  
+      textSize(20);
+      noStroke();
+      fill(0, 0, 0, 250);
+      text('Tudo! É o material mais versátil!', 90, 80);
+      text('Você pode fazer o que você quiser com', 90, 120);
+      text('a madeira, mas você deve ficar atenta', 90, 150);
+      text('às suas propriedades.', 90, 180);
+      text('Se você quer construir uma canoa você', 90, 210);
+      text('deve fazê-la para que seja leve,', 90, 240);
+      text('resistente e flexível para cruzar o rio,', 90, 270);
+      text('não acha?', 90, 300);
+      text('c) Continuar...', 270, 330);
+      
+      if(keyIsDown(67)){
+        reinte=21;
+      }
+      else{}
+      
+    }
+    else{}
+    if(reinte==21){
+      
+      strokeWeight(5);
+      stroke(240, 220, 70, 250)
+      fill(50, 110, 250, 200)
+      rect(70, 50, 420, 330);
+  
+      textSize(20);
+      noStroke();
+      fill(0, 0, 0, 250);
+      text('Se a canoa fosse muito pesada, ela', 90, 80);
+      text('afundaria. Se ela fosse pouco resistente', 90, 110);
+      text('ela se quebraria fácil, e você cairia', 90, 140);
+      text('na água. Por isso que a madeira é o', 90, 170);
+      text('material ideal, ela é leve e resistente.', 90, 200);
+      text('Mas se seu objetivo é fazer uma espada,', 90, 230);
+      text('você não deve usar madeira. A espada tem', 90, 260);
+      text('que ser pesada e muito dura para cortar', 90, 290);
+      text('objetos... E a madeira não é assim.', 90, 320);
+      text('j) Hmm... Entendo.', 270, 360);
+      
+      if(keyIsDown(74)){
+        reinte=22;
+      }
+      else{}
+      
+    }
+    else{}
+    if(reinte==22){
+      
+      strokeWeight(5);
+      stroke(240, 220, 70, 250)
+      fill(50, 110, 250, 200)
+      rect(70, 50, 420, 310);
+  
+      textSize(20);
+      noStroke();
+      fill(0, 0, 0, 250);
+      text('Parece que você já entende bem sobre', 90, 80);
+      text('a madeira, então, eu decidi te dar isso...', 90, 110);
+      text('É uma', 90, 150);
+      text('.', 311, 150);
+      text('Ela é toda sua, use do jeito que quiser.', 90, 180);
+      text('Lembre-se de suas', 90, 210);
+      text('na hora', 387, 210);
+      text('de construir algo!', 90, 240);
+      text('c) Muito obrigada!', 300, 330);
+      
+      textSize(20);
+      noStroke();
+      fill(240, 220, 70, 250);
+      text('tábua de madeira', 153, 150);
+      text('propriedades', 266, 210);
+      
+      image(madeira, 160, 225);
+      
+      
+      if(keyIsDown(67)){
+        reinte=0;
+        madeirainv=1;
+      }
+      else{}
+      
+    }
+    else{}
+  
+} //Fase1 Interior da Casa do Carpinteiro
+  else{}
+  
+if(tela==17){
+  clear();
+  image(penhasco, 0, 0);
+  image(caradaponte, 90, 290);
+  image(ponte, 145, 295);
+  
+if(x1<-40){
+  tela=14
+  x1=566
+  musipenhasco.stop();
+  musivila1.loop(0, 1, 0.2);
+}
+  
+  
+  if(x1>=30&&x1<=46&&y1>275&&y1<290){
+    strokeWeight(2);
+    stroke(0, 120, 250, 250);
+    fill(240, 220, 70, 190);
+    ellipse(75, 346, 40, 20);
+}
+  else{
+    strokeWeight(3);
+    stroke(50, 110, 250, 250);
+    fill(20, 20, 20, 60);
+    ellipse(75, 346, 40, 20);
+  }
+  
+  
+if(mov==1){
+  image(perdirpar, x1, y1);
+  noStroke()
+  fill(20, 20, 20, 70);
+  ellipse(x1+25, y1+68, 35, 5);
+}
+  else{}
+if(mov==2){
+  image(perdirand, x1, y1);
+  noStroke()
+  fill(20, 20, 20, 70);
+  ellipse(x1+25, y1+68, 35, 5);
+}
+  else{}
+if(mov==3){
+  image(peresqpar, x1, y1);
+  noStroke()
+  fill(20, 20, 20, 70);
+  ellipse(x1+25, y1+68, 35, 5);
+}
+  else{}
+if(mov==4){
+  image(peresqand, x1, y1);
+  noStroke()
+  fill(20, 20, 20, 70);
+  ellipse(x1+25, y1+68, 35, 5);
+}
+  else{}
+if(mov==5){
+  image(perbaipar, x1, y1);
+  noStroke()
+  fill(20, 20, 20, 70);
+  ellipse(x1+25, y1+64, 35, 5);
+}
+  else{}
+if(mov==6){
+  image(perbaiand, x1, y1);
+  noStroke()
+  fill(20, 20, 20, 70);
+  ellipse(x1+25, y1+64, 35, 5);
+}
+  else{}
+if(mov==7){
+  image(percimpar, x1, y1);
+  noStroke()
+  fill(20, 20, 20, 70);
+  ellipse(x1+25, y1+70, 35, 5);
+}
+  else{}
+if(mov==8){
+  image(percimand, x1, y1);
+  noStroke()
+  fill(20, 20, 20, 70);
+  ellipse(x1+25, y1+70, 35, 5);
+}
+  else{}
+if(mov==12){
+  image(perdirand2, x1, y1);
+  noStroke()
+  fill(20, 20, 20, 70);
+  ellipse(x1+25, y1+68, 35, 5);
+}
+  else{}
+if(mov==14){
+  image(peresqand2, x1, y1);
+  noStroke()
+  fill(20, 20, 20, 70);
+  ellipse(x1+25, y1+68, 35, 5);
+}
+  else{}
+if(mov==16){
+  image(perbaiand2, x1, y1);
+  noStroke()
+  fill(20, 20, 20, 70);
+  ellipse(x1+25, y1+64, 35, 5);
+}
+  else{}
+if(mov==18){
+  image(percimand2, x1, y1);
+  noStroke()
+  fill(20, 20, 20, 70);
+  ellipse(x1+25, y1+70, 35, 5);
+}
+  else{}
+  
+  
+  
+  if(keyIsDown(LEFT_ARROW)){
+  if(tempo<=1.5){
+    mov=4;
+    x1=x1-2
+    tempo = tempo + 0.1;
+  }
+  else{}
+  if(tempo>1.5&&tempo<3){
+    mov=14;
+    x1 = x1-2;
+    tempo = tempo + 0.1;
+  }
+  else{}
+  if(tempo>=3){
+    tempo = 0;
+  }
+  else{}
+}
+  else{
+    if(mov==4 || mov==14){
+      tempo=0;
+      mov=3;
+    }
+    else{}
+  }
+  
+  if(keyIsDown(RIGHT_ARROW)){
+if(x1<40&&y1>400 || y1<=400&&y1>=320&&x1<20 || y1<320&&x1<45){
+  if(tempo<=1.5){
+  mov=2;
+  x1=x1+2;
+  tempo = tempo + 0.1;
+  }
+  else{}
+  if(tempo>1.5&&tempo<3){
+      mov=12;
+      x1=x1+2
+      tempo = tempo + 0.1;
+  }
+  else{}
+  if(tempo>=3){
+    tempo=0;
+  }
+  else{}
+}
+  else{}
+}
+  else{
+    if(mov==2 || mov==12){
+      tempo=0;
+      mov=1;
+    }
+    else{}
+  }
+  
+  if(keyIsDown(UP_ARROW)){
+if(x1>=30&&y1<=420&&y1>400 || x1<=30&&y1>265 || x1>=30&&y1<350&&y1>265){
+  if(tempo<=1.5){
+  mov=8;
+  y1=y1-2
+  tempo = tempo + 0.1;  
+  }  
+  else{}
+  if(tempo>1.5&&tempo<3){
+    mov=18
+    y1=y1-2
+    tempo=tempo+0.1;
+  }
+  else{}
+  if(tempo>=3){
+    tempo=0;
+  }
+  else{}
+}
+  else{}
+}
+  else{
+    if(mov==8 || mov==18){
+      tempo=0;
+      mov=7;
+    }
+    else{}
+  }
+  
+  if(keyIsDown(DOWN_ARROW)){
+if(y1<420&&x1<=22 || x1>=30&&y1>=400&&y1<420 || x1>=30&&y1>=264&&y1<=300){
+  if(tempo<=1.5){
+  mov=6;
+  y1=y1+2
+  tempo = tempo + 0.1;
+  }
+  else{}
+  if(tempo>1.5&&tempo<3){
+  mov=16;
+  y1=y1+2
+  tempo = tempo + 0.1;    
+  }
+  else{}
+  if(tempo>=3){
+    tempo=0;
+  }
+  else{}
+}
+  else{}
+}
+  else{
+    if(mov==6 || mov==16){
+    tempo = 0;
+    mov=5;
+  }
+    else{}
+}
+  
+if(keyIsDown(90)){
+  inte=2;
+}
+  else{}
+  
+if(keyIsDown(88)){
+  inte=1;
+}
+  else{}
+  
+  if(inte==2){
+    if(x1>=30&&x1<=46&&y1>275&&y1<290){
+      if(reinte==0){
+        
+      strokeWeight(5);
+      stroke(240, 220, 70, 250)
+      fill(50, 110, 250, 180)
+      rect(70, 50, 400, 250);
+      
+      textSize(20);
+      noStroke();
+      fill(0, 0, 0, 250);
+      text('Ah! Você não deve passar pela ponte!', 90, 80);
+      text('Tem algo que eu preciso que você', 90, 110);
+      text('faça, antes de tudo!', 90, 140);
+      text('Por favor, ouça o que eu tenho a dizer!', 90, 180);
+      text('i) Ouvir...', 90, 220);
+      text('j) Eu tenho o que você precisa!', 90, 250);
+      text('k) Ir embora...', 90, 280);
+        
+        if(keyIsDown(73)){
+          reinte=10;
+        }
+        else{}
+        if(keyIsDown(74)){
+          reinte=20;
+        }
+        else{}
+        if(keyIsDown(75)){
+          inte=1;
+        }
+        else{}
+        
+      }
+      else{}
+      
+      if(reinte==10){
+        
+      strokeWeight(5);
+      stroke(240, 220, 70, 250)
+      fill(50, 110, 250, 180)
+      rect(70, 50, 400, 250);
+      
+      textSize(20);
+      noStroke();
+      fill(0, 0, 0, 250);
+      text('Olha, eu vim para pedir ajuda!', 90, 80);
+      text('Muitas pessoas passam por essa ponte,', 90, 110);
+      text('por isso, eu vim aqui para conseguir a', 90, 140);
+      text('atenção de alguém que possa me ajudar!', 90, 170);
+      text('Minha tesoura quebrou! E eu não consigo', 90, 210);
+      text('cortar as coisas sem ela!', 90, 240);
+      text('c) Continuar...', 270, 280);
+        
+        if(keyIsDown(67)){
+          reinte=11;
+        }
+        else{}
+        
+      }
+      else{}
+      if(reinte==11){
+        
+      strokeWeight(5);
+      stroke(240, 220, 70, 250)
+      fill(50, 110, 250, 180)
+      rect(70, 50, 400, 250);
+      
+      textSize(20);
+      noStroke();
+      fill(0, 0, 0, 250);
+      text('Eu sou um jardineiro, e preciso de uma', 90, 80);
+      text('tesoura para cortar minhas plantas.', 90, 110);
+      text('Eu vim pedir ajuda urgente, porquê', 90, 150);
+      text('minhas plantas estão crescendo muito!', 90, 180);
+      text('E eu não tenho como cortá-las sem uma', 90, 210);
+      text('tesoura!', 90, 240);
+      text('i) Continuar...', 270, 280);
+        
+        if(keyIsDown(73)){
+          reinte=12;
+        }
+        else{}
+        
+      }
+      else{}
+      if(reinte==12){
+        
+      strokeWeight(5);
+      stroke(240, 220, 70, 250)
+      fill(50, 110, 250, 180)
+      rect(70, 50, 400, 250);
+      
+      textSize(20);
+      noStroke();
+      fill(0, 0, 0, 250);
+      text('Cheguei na cidade pedindo ajuda', 90, 80);
+      text('desesperadamente, mas me acharam', 90, 110);
+      text('maluco, e ninguém quis falar comigo!', 90, 140);
+      text('Por favor, garotinha, eu preciso de uma', 90, 180);
+      text('tesoura afiada e resistente para cortar', 90, 210);
+      text('minhas plantas!', 90, 240);
+      text('c) Hmm...', 270, 280);
+        
+        if(keyIsDown(67)){
+          reinte=0;
+        }
+        else{}
+        
+      }
+      else{}
+      
+      if(reinte==20){
+        
+      strokeWeight(5);
+      stroke(240, 220, 70, 250)
+      fill(50, 110, 250, 180)
+      rect(70, 50, 400, 250);
+      
+      textSize(20);
+      noStroke();
+      fill(0, 0, 0, 250);
+      text('Você tem? Você tem uma', 90, 80);
+      text('?', 392, 80);
+      text('Ela precisa ter lâminas resistentes,', 90, 120);
+      text('e precisa ter uma parte macia para', 90, 150);
+      text('segurar e não machucar as mãos.', 90, 180);
+      text('c) Sim, feita de ferro e tecido!', 150, 250);
+        
+        
+      textSize(20);
+      noStroke();
+      fill(240, 220, 70, 250);
+      text('tesoura', 323, 80);
+        
+        if(keyIsDown(67)){
+          reinte=21;
+        }
+        else{}
+        
+        
+      }
+      else{}
+      if(reinte==21){
+        
+      strokeWeight(5);
+      stroke(240, 220, 70, 250)
+      fill(50, 110, 250, 180)
+      rect(70, 50, 410, 260);
+      
+      textSize(20);
+      noStroke();
+      fill(0, 0, 0, 250);
+      text('Ha ha! É exatamente o que eu preciso!', 90, 80);
+      text('Mas... Você daria essa tesoura para mim?', 90, 110);
+      text('Se você me der, eu deixo você passar', 90, 150);
+      text('pela ponte, e volto para minha cidade.', 90, 180);
+      text('Prometo que não vou ficar atrapalhando', 90, 210);
+      text('mais as pessoas!', 90, 240);
+      text('j) Eu dou sim!', 250, 290);
+        
+        if(keyIsDown(74)){
+          if(tesourainv==1){
+            reinte=22;
+          }
+          else{
+            reinte=29;
+          }
+        }
+        else{}
+        
+      }
+      else{}
+      if(reinte==22){
+        
+      strokeWeight(5);
+      stroke(240, 220, 70, 250)
+      fill(50, 110, 250, 180)
+      rect(70, 50, 430, 260);
+      
+      textSize(20);
+      noStroke();
+      fill(0, 0, 0, 250);
+      text('Muito obrigado! Muito obrigado mesmo!', 90, 80);
+      text('Essa tesoura vai salvar o meu dia!', 90, 110);
+      text('O seu nome é Alice? Ha! Muito obrigado,', 90, 150);
+      text('Alice!', 90, 180);
+      text('c) De nada! Agora, vou atrás do meu coelho!', 90, 250);
+        
+        if(keyIsDown(67)){
+          reinte=0;
+          inte=1;
+          tela=2000;
+          musipenhasco.stop();
+          musifinal1.loop(0, 1, 0.4);
+        }
+        else{}
+        
+      }
+      else{}
+      if(reinte==29){
+        
+      strokeWeight(5);
+      stroke(240, 220, 70, 250)
+      fill(50, 110, 250, 180)
+      rect(70, 50, 410, 260);
+      
+      textSize(20);
+      noStroke();
+      fill(0, 0, 0, 250);
+      text('Ei! Você não tem uma tesoura!', 90, 90);
+      text('Ahh! Minhas plantas!', 90, 120);
+      text('Só vou sair daqui quando eu conseguir', 90, 160);
+      text('uma tesoura!', 90, 190);
+      text('c) Oops...', 270, 260);
+        
+        if(keyIsDown(67)){
+          reinte=0;
+          inte=1;
+        }
+        else{}
+        
+      }
+      else{}
+      
+    }
+    else{}
+  }
+  else{}
+  
+  
+} //Fase1 Penhasco
+  else{}
+  
+if(tela==1000){
+  clear();
+  
+  if(reinte==0){
+  
+  background(240, 240, 240, 200);
+  
+  noStroke();
+  fill(20, 20, 20, 70);
+  ellipse(140, 450, 280, 40);
+  
+  fill(50, 50, 50, 50);
+  ellipse(50, 100, 5, 150);
+  ellipse(70, 100, 5, 150);
+  
+      strokeWeight(5);
+      stroke(240, 220, 70, 250)
+      fill(50, 110, 250, 200)
+      rect(370, 50, 220, 350);
+  
+      textSize(20);
+      noStroke();
+      fill(0, 0, 0, 250);
+      text('Essa é a história', 385, 80);
+      text('de uma garotinha', 385, 110);
+      text('chamada Alice.', 385, 140);
+      text('Ela é muito curiosa,', 385, 180);
+      text('esperta, e criativa.', 385, 210);
+      text('Adora conversar', 385, 250);
+      text('com as pessoas e', 385, 280);
+      text('aprender com elas.', 385, 310);
+      text('c) Continuar.', 385, 350);
+  
+      if(keyIsDown(67)){
+        reinte=1;
+      }
+      else{}
+  
+  
+  image(persointro, 10, 20);
+    
+  }
+  else{}
+  
+  if(reinte==1){
+    
+    background(250, 250, 249, 200);
+    
+    
+    image(coelhointro, 0, 0);
+    image(persointro2, 330, 250);
+    
+    noStroke();
+    fill(50, 110, 250, 130);
+    rect(380, 50, 40, 40, 100);
+    
+    fill(240, 220, 70, 170);
+    rect(300, 450, 40, 40, 100);
+    
+      strokeWeight(5);
+      stroke(240, 220, 70, 250)
+      fill(50, 110, 250, 200)
+      rect(340, 96, 250, 165);
+  
+      textSize(20);
+      noStroke();
+      fill(0, 0, 0, 250);
+      text('Alice tem um coelho', 355, 130);
+      text('chamado Dom. Ele é', 355, 160);
+      text('muito fofo e esperto,', 355, 190);
+      text('assim como ela.', 355, 220);
+    
+      strokeWeight(5);
+      stroke(240, 220, 70, 250)
+      fill(50, 110, 250, 200)
+      rect(30, 320, 260, 170);
+    
+      textSize(20);
+      noStroke();
+      fill(0, 0, 0, 250);
+      text('Alice passa o dia com', 45, 355);
+      text('ele. Leem livros, brincam,', 45, 385);
+      text('e até tomam chá juntos.', 45, 415);
+      text('i) Continuar.', 45, 460);
+    
+      if(keyIsDown(73)){
+        reinte=2;
+      }
+      else{}
+    
+  }
+  else{}
+  
+  if(reinte==2){
+    
+    background(200, 240, 200, 200);
+    
+    image(coelhointro2, 150, 230);
+    
+    strokeWeight(3);
+    stroke(240, 220, 70, 250)
+    fill(50, 110, 250, 250)
+    rect(70, 312, 12, 40, 5);
+    rect(70, 360, 12, 12, 100);
+    rect(530, 250, 10, 35, 5);
+    rect(530, 290, 10, 10, 100);
+    rect(480, 380, 15, 50, 5);
+    rect(480, 440, 15, 15, 100);
+    
+      
+      strokeWeight(5);
+      stroke(240, 220, 70, 250)
+      fill(50, 110, 250, 180)
+      rect(50, 50, 470, 165);
+  
+      textSize(20);
+      noStroke();
+      fill(0, 0, 0, 250);
+      text('Mas um dia, o seu coelho começou a correr', 70, 85);
+      text('em uma direção e fugiu para uma vila próxima,', 70, 115);
+      text('sem dizer nada!', 70, 145);
+      text('j) Continuar.', 270, 190);
+    
+      if(keyIsDown(74)){
+        reinte=3;
+      }
+      else{}
+      
+      
+      
+    
+  }
+  else{}
+  
+  if(reinte==3){
+    
+    background(200, 230, 250, 200);
+    
+    image(persointro3, -50, 100);
+    
+    textSize(90);
+    strokeWeight(8);
+    stroke(240, 230, 120, 250)
+    fill(50, 110, 250, 230);
+    text('?', 170, 130);
+    
+      strokeWeight(5);
+      stroke(240, 220, 70, 250)
+      fill(50, 110, 250, 200)
+      rect(270, 50, 300, 420);
+  
+      textSize(20);
+      noStroke();
+      fill(0, 0, 0, 250);
+      text('Alice não entendeu o por quê', 285, 90);
+      text('de seu amiguinho ter agido', 285, 120);
+      text('desse jeito.', 285, 150);
+      text('Será se ela tinha assustado', 285, 180);
+      text('o seu coelinho?', 285, 210);
+      text('Independente disso, Alice', 285, 240);
+      text('partiu na direção que seu', 285, 270);
+      text('coelho havia seguido com', 285, 300);
+      text('o objetivo de encontrá-lo.', 285, 330);
+      text('Mas ela não sabia da', 285, 360);
+      text('aventura que a aguardava...', 285, 390);
+      text('k) Concluir.', 350, 440);
+    
+    if(keyIsDown(75)){
+      reinte=4;
+    }
+    else{}
+    
+  }
+  else{}
+  
+  if(reinte==4){
+    
+    background(120, 250, 140, 240);
+    
+    strokeWeight(3);
+    stroke(20);
+    noFill();
+    rect(50, 50, 60, 60);
+    rect(50, 150, 60, 60);
+    
+    textSize(50);
+    noStroke();
+    fill(0, 0, 0, 250);
+    text('Z', 65, 97);
+    text('=>', 140, 100);
+    text('X', 64, 198);
+    text('=>', 140, 200);
+    
+      textSize(20);
+      noStroke();
+      fill(0, 0, 0, 250);
+      text('Ativa o Modo Curiosidade, que interage', 220, 70);
+      text('com o ambiente ao redor.', 220, 100);
+      text('Ativa o Modo Exploração, que permite', 220, 170);
+      text('um passeio sem interrupções.', 220, 200);
+      text('Fique atento aos botões:  i,  j,  k,  c.', 50, 250);
+      text('Eles são usados para responder as perguntas', 50, 280);
+      text('que serão feitas a Alice.', 50, 310);
+      text('Fique atento também aos círculos no chão.', 50, 350);
+      text('Eles representam uma oportunidade de interagir.', 50, 380);
+      text('A tecla "ESC" reinicia seu jogo, use com', 50, 410);
+      text('cuidado!', 50, 440);
+      text('c) Começar.', 270, 470);
+    
+    if(keyIsDown(67)){
+      tela=11;
+      inte=1;
+      reinte=0;
+      musiintro1.stop();
+      musifase1.loop(0, 1, 1.6);
+    }
+    else{}
+    
+  }
+  else{}
+  
+  
+} //Fase1 Introdução
+  else{}
+  
+if(tela==2000){
+  clear();
+  
+  if(reinte==0){
+    
+    background(245, 245, 245, 220);
+    
+    image(coelhofinal1, 290, 230);
+    image(persofinal1, 0, 0);
+    
+      strokeWeight(5);
+      stroke(240, 220, 70, 250)
+      fill(50, 110, 250, 200)
+      rect(320, 20, 265, 180);
+  
+      textSize(20);
+      noStroke();
+      fill(0, 0, 0, 250);
+      text('Finalmente, Alice encontra', 335, 60);
+      text('seu amado coelho Dom,', 335, 90);
+      text('logo após a ponte, no', 335, 120);
+      text('começo do Vale de Flores.', 335, 150);
+    
+      
+      strokeWeight(5);
+      stroke(240, 220, 70, 250)
+      fill(50, 110, 250, 200)
+      rect(15, 280, 265, 180);
+  
+      textSize(20);
+      noStroke();
+      fill(0, 0, 0, 250);
+      text('Dom disse para Alice que', 30, 315);
+      text('tinha corrido dela não', 30, 345);
+      text('para fugir, mas para ir', 30, 375);
+      text('brincar em um lugar novo.', 30, 405);
+      text('i) Continuar', 60, 438);
+    
+      if(keyIsDown(73)){
+        reinte=1;
+      }
+      else{}
+    
+    
+  }
+  else{}
+  
+  if(reinte==1){
+    
+    background(250, 200, 230, 200);
+    
+    noStroke();
+    fill(20, 20, 20, 100);
+    ellipse(290, 463, 150, 15);
+    
+    image(coelhofinal2, 135, 220);
+    
+    strokeWeight(5);
+    stroke(240, 220, 70, 250)
+    noFill();
+    rect(70, 250, 40, 60, 100);
+    rect(30, 235, 20, 80, 5);
+    fill(50, 110, 250, 150)
+    rect(470, 280, 35, 35, 100);
+    
+    strokeWeight(5);
+    stroke(50, 110, 250, 200)
+    noFill();
+    rect(490, 350, 40, 60, 100);
+    rect(450, 330, 20, 80, 5);
+    fill(240, 220, 70, 150);
+    rect(50, 350, 35, 35, 100)
+    
+    
+    
+      strokeWeight(5);
+      stroke(240, 220, 70, 250)
+      fill(50, 110, 250, 200)
+      rect(100, 20, 400, 210);
+  
+      textSize(20);
+      noStroke();
+      fill(0, 0, 0, 250);
+      text('Alice pôde contar a ele todas as suas', 120, 55);
+      text('aventuras, e tudo o que aprendeu no', 120, 85);
+      text('caminho. Contou a respeito da dureza', 120, 115);
+      text('dos metais, da flexibilidade da', 120, 145);
+      text('madeira e da maciez dos tecidos.', 120, 175);
+      text('j) Continuar.', 230, 212);
+    
+      if(keyIsDown(74)){
+        reinte=2;
+      }
+      else{}
+    
+    
+    
+  }
+  else{}
+  
+  if(reinte==2){
+    
+    background(200, 220, 230, 200);
+    
+    image(persofinal2, 10, 70);
+    
+      strokeWeight(5);
+      stroke(240, 220, 70, 250)
+      fill(50, 110, 250, 200)
+      rect(360, 50, 205, 400);
+  
+      textSize(20);
+      noStroke();
+      fill(0, 0, 0, 250);
+      text('E assim, eles foram', 375, 100);
+      text('para casa...', 375, 130);
+      text('Contando e', 375, 160);
+      text('lembrando da', 375, 190);
+      text('história, e dos', 375, 220);
+      text('aprendizados da', 375, 250);
+      text('aventura.', 375, 280);
+      text('Uma memória que', 375, 310);
+      text('eles não irão', 375, 340);
+      text('esquecer...', 375, 370);
+      text('k) Continuar.', 390, 415);
+    
+    if(keyIsDown(75)){
+      reinte=3;
+    }
+    else{}
+    
+  }
+  else{}
+  
+  if(reinte==3){
+    
+    image(persofinal3, 0, 0);
+    
+      strokeWeight(5);
+      stroke(240, 220, 70, 250)
+      fill(50, 110, 250, 150)
+      rect(360, 30, 225, 255);
+      rect(10, 270, 215, 220);
+  
+      textSize(20);
+      noStroke();
+      fill(0, 0, 0, 250);
+      text('Essa foi a história da', 375, 60);
+      text('primeira aventura de', 375, 90);
+      text('Alice, que cresceu', 375, 120);
+      text('lembrando do que', 375, 150);
+      text('aprendeu naquele dia.', 375, 180);
+      text('Sobre a importância', 375, 210);
+      text('das propriedades dos', 375, 240);
+      text('materiais.', 375, 270);
+      text('Ela ainda aprenderia', 20, 305);
+      text('muito mais sobre o', 20, 335);
+      text('Material das Coisas.', 20, 375);
+      text('c) Concluir.', 50, 430);
+    
+      if(keyIsDown(67)){
+        reinte=0;
+        inte=1;
+        tela=1;
+        musifinal1.stop();
+        musimenufreq=0;
+        x1=20;
+        y1=390;
+      }
+      else{}
+    
+  }
+  else{}
+  
+  
+}// Fase1 Encerramento
+  else{}
+  
+}//Telas
